@@ -1,0 +1,51 @@
+.reg-and-log {
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+
+  &__inner {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+  }
+
+  &__title {
+    text-align: center;
+
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__captcha {
+    width: 100%;
+    height: auto;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .logo {
+    margin: 0;
+  }
+}

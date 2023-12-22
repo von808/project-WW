@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin support</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,600;6..12,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!--=include sprite.html-->
+  <div class="wrapper page-admin-support page-support">
+    <!--=include sidebar-support.html-->
+    <main class="main">
+      <section class="admin-support">
+        <div class="container">
+          <div class="admin-support__inner">
+            <div class="title-box">
+              <div class="admin-support__tab-btns">
+                <button class="admin-support__tab-btn tab-btn tab-active" data-tab="#support-tab_1">Tickets</button>
+                <button class="admin-support__tab-btn tab-btn" data-tab="#support-tab_2">compensations</button>
+                <button class="admin-support__tab-btn tab-btn" data-tab="#support-tab_3">tech support</button>
+                <button class="admin-support__tab-btn tab-btn" data-tab="#support-tab_4">Send message</button>
+              </div>
+            </div>
+            <div class="admin-support__tab-items">
+              <div class="admin-support__tab-item tab-item tab-active" id="support-tab_1">
+                <div class="tickets">
+                  <div class="tickets__inner">
+                    <div class="tickets__head">
+                      <div class="tickets__head-item">
+                        <span>Support Answered</span>
+                        <div class="tickets__head-circle">
+                          05
+                        </div>
+                      </div>
+                      <div class="tickets__head-item">
+                        <span>Not Answered</span>
+                        <div class="tickets__head-circle">
+                          02
+                        </div>
+                      </div>
+                      <div class="tickets__head-item">
+                        <span>Not Resolved Tickets</span>
+                        <div class="tickets__head-circle">
+                          08
+                        </div>
+                      </div>
+                      <div class="tickets__head-item">
+                        <span>Resolved Tickets</span>
+                        <div class="tickets__head-circle">
+                          17
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tickets__content">
+                      <div class="tickets__history">
+                        <div class="search">
+                          <input class="search__input" type="text" placeholder="Search">
+                          <button class="search__btn">
+                            <svg class="icon-search">
+                              <use xlink:href="#search"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="tickets__history-list">
+                          <a class="tickets__history-list-item tickets__history-list-item--not-answered" href="#!">
+                            <span>Ticket #48120 by OR3948HN387NH48</span>
+                            |
+                            <div class="form-group">
+                              <div class="dropdown">                                
+                                <svg class="icon-chevron">
+                                  <use xlink:href="#chevron"></use>
+                                </svg>
+                                <button class="dropdown__button" type="button">
+                                  <span class="dropdown__list-item-content not-answered">Not Answered</span>
+                                </button>
+                                <ul class="dropdown__list">
+                                  <li class="dropdown__list-item" data-value="not-answered">
+                                    <span class="dropdown__list-item-content not-answered">Not Answered</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="answered">
+                                    <span class="dropdown__list-item-content answered">Answered</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="resolved">
+                                    <span class="dropdown__list-item-content resolved">Resolved</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="not-resolved">
+                                    <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
+                                  </li>
+                                </ul>
+                                <input type="text" name="select-category" value="Not Answered" class="dropdown__input-hidden">
+                              </div>
+                            </div>
+                          </a>
+                          <a class="tickets__history-list-item tickets__history-list-item--answered" href="#!">
+                            <span>Ticket #44901 by UE344KO345NN345</span>
+                            |
+                            <div class="form-group">
+                              <div class="dropdown">
+                                <svg class="icon-chevron">
+                                  <use xlink:href="#chevron"></use>
+                                </svg>
+                                <button class="dropdown__button" type="button">
+                                  <span class="dropdown__list-item-content answered">Answered</span>
+                                </button>
+                                <ul class="dropdown__list">
+                                  <li class="dropdown__list-item" data-value="not-answered">
+                                    <span class="dropdown__list-item-content not-answered">Not Answered</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="answered">
+                                    <span class="dropdown__list-item-content answered">Answered</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="resolved">
+                                    <span class="dropdown__list-item-content resolved">Resolved</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="not-resolved">
+                                    <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
+                                  </li>
+                                </ul>
+                                <input type="text" name="select-category" value="answered" class="dropdown__input-hidden">
+                              </div>
+                            </div>
+                          </a>
+                          <a class="tickets__history-list-item tickets__history-list-item--resolved" href="#!">
+                            <span>Ticket #43375 by MZ567OI349MB190</span>
+                            |
+                            <div class="form-group">
+                              <div class="dropdown">
+                                <svg class="icon-chevron">
+                                  <use xlink:href="#chevron"></use>
+                                </svg>
+                                <button class="dropdown__button" type="button">
+                                  <span class="dropdown__list-item-content resolved">Resolved</span>
+                                </button>
+                                <ul class="dropdown__list">
+                                  <li class="dropdown__list-item" data-value="not-answered">
+                                    <span class="dropdown__list-item-content not-answered">Not Answered</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="answered">
+                                    <span class="dropdown__list-item-content answered">Answered</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="resolved">
+                                    <span class="dropdown__list-item-content resolved">Resolved</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="not-resolved">
+                                    <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
+                                  </li>
+                                </ul>
+                                <input type="text" name="select-category" value="resolved" class="dropdown__input-hidden">
+                              </div>
+                            </div>
+                          </a>
+                          <a class="tickets__history-list-item tickets__history-list-item--not-answered" href="#!">
+                            <span>Ticket #41281 by OR3948HN387NH48</span>
+                            |
+                            <div class="form-group">
+                              <div class="dropdown">
+                                <svg class="icon-chevron">
+                                  <use xlink:href="#chevron"></use>
+                                </svg>
+                                <button class="dropdown__button" type="button">
+                                  <span class="dropdown__list-item-content not-answered">Not Answered</span>
+                                </button>
+                                <ul class="dropdown__list">
+                                  <li class="dropdown__list-item" data-value="not-answered">
+                                    <span class="dropdown__list-item-content not-answered">Not Answered</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="answered">
+                                    <span class="dropdown__list-item-content answered">Answered</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="resolved">
+                                    <span class="dropdown__list-item-content resolved">Resolved</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="not-resolved">
+                                    <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
+                                  </li>
+                                </ul>
+                                <input type="text" name="select-category" value="Not Answered" class="dropdown__input-hidden">
+                              </div>
+                            </div>
+                          </a>
+                          <a class="tickets__history-list-item tickets__history-list-item--not-resolved" href="#!">
+                            <span>Ticket #40269 by KN190LP333PY344</span>
+                            |
+                            <div class="form-group">
+                              <div class="dropdown">
+                                <svg class="icon-chevron">
+                                  <use xlink:href="#chevron"></use>
+                                </svg>
+                                <button class="dropdown__button" type="button">
+                                  <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
+                                </button>
+                                <ul class="dropdown__list">
+                                  <li class="dropdown__list-item" data-value="not-answered">
+                                    <span class="dropdown__list-item-content not-answered">Not Answered</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="answered">
+                                    <span class="dropdown__list-item-content answered">Answered</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="resolved">
+                                    <span class="dropdown__list-item-content resolved">Resolved</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="not-resolved">
+                                    <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
+                                  </li>
+                                </ul>
+                                <input type="text" name="select-category" value="Not Answered" class="dropdown__input-hidden">
+                              </div>
+                            </div>
+                          </a>
+                          <a class="tickets__history-list-item tickets__history-list-item--resolved" href="#!">
+                            <span>Ticket #39845 by XC348QW939BN509</span>
+                            |
+                            <div class="form-group">
+                              <div class="dropdown">
+                                <svg class="icon-chevron">
+                                  <use xlink:href="#chevron"></use>
+                                </svg>
+                                <button class="dropdown__button" type="button">
+                                  <span class="dropdown__list-item-content resolved">Resolved</span>
+                                </button>
+                                <ul class="dropdown__list">
+                                  <li class="dropdown__list-item" data-value="not-answered">
+                                    <span class="dropdown__list-item-content not-answered">Not Answered</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="answered">
+                                    <span class="dropdown__list-item-content answered">Answered</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="resolved">
+                                    <span class="dropdown__list-item-content resolved">Resolved</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="not-resolved">
+                                    <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
+                                  </li>
+                                </ul>
+                                <input type="text" name="select-category" value="resolved" class="dropdown__input-hidden">
+                              </div>
+                            </div>
+                          </a>
+                          <a class="tickets__history-list-item tickets__history-list-item--resolved" href="#!">
+                            <span>Ticket #35699 by NU490MR345OR100</span>
+                            |
+                            <div class="form-group">
+                              <div class="dropdown">
+                                <svg class="icon-chevron">
+                                  <use xlink:href="#chevron"></use>
+                                </svg>
+                                <button class="dropdown__button" type="button">
+                                  <span class="dropdown__list-item-content resolved">Resolved</span>
+                                </button>
+                                <ul class="dropdown__list">
+                                  <li class="dropdown__list-item" data-value="not-answered">
+                                    <span class="dropdown__list-item-content not-answered">Not Answered</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="answered">
+                                    <span class="dropdown__list-item-content answered">Answered</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="resolved">
+                                    <span class="dropdown__list-item-content resolved">Resolved</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="not-resolved">
+                                    <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
+                                  </li>
+                                </ul>
+                                <input type="text" name="select-category" value="resolved" class="dropdown__input-hidden">
+                              </div>
+                            </div>
+                          </a>
+                          <a class="tickets__history-list-item tickets__history-list-item--resolved" href="#!">
+                            <span>Ticket #29005 by TP934FF789XV494</span>
+                            |
+                            <div class="form-group">
+                              <div class="dropdown">
+                                <svg class="icon-chevron">
+                                  <use xlink:href="#chevron"></use>
+                                </svg>
+                                <button class="dropdown__button" type="button">
+                                  <span class="dropdown__list-item-content resolved">Resolved</span>
+                                </button>
+                                <ul class="dropdown__list">
+                                  <li class="dropdown__list-item" data-value="not-answered">
+                                    <span class="dropdown__list-item-content not-answered">Not Answered</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="answered">
+                                    <span class="dropdown__list-item-content answered">Answered</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="resolved">
+                                    <span class="dropdown__list-item-content resolved">Resolved</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="not-resolved">
+                                    <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
+                                  </li>
+                                </ul>
+                                <input type="text" name="select-category" value="resolved" class="dropdown__input-hidden">
+                              </div>
+                            </div>
+                          </a>
+                          <a class="tickets__history-list-item--more" href="#!">View Your Application History</a>
+                        </div>
+                        <button class="btn">Send Message to User</button>
+                      </div>
+                      <div class="tickets__send">
+                        <div class="tickets__send-head">
+                          <div class="tickets__send-ticket">Ticket #48120 by OR3948HN387NH48</div>
+                          <div class="tickets__send-priority">
+                            <div class="form-group">
+                              <div class="dropdown">
+                                <svg class="icon-chevron">
+                                  <use xlink:href="#chevron"></use>
+                                </svg>
+                                <button class="dropdown__button" type="button">
+                                  <span class="dropdown__list-item-content">Priority: Medium</span>
+                                </button>
+                                <ul class="dropdown__list">
+                                  <li class="dropdown__list-item" data-value="high">
+                                    <span class="dropdown__list-item-content">Priority: High</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="medium">
+                                    <span class="dropdown__list-item-content">Priority: Medium</span>
+                                  </li>
+                                  <li class="dropdown__list-item" data-value="low">
+                                    <span class="dropdown__list-item-content">Priority: Low</span>
+                                  </li>
+                                </ul>
+                                <input type="text" name="select-category" value="medium" class="dropdown__input-hidden">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tickets__send-chat--box">
+                          <div class="tickets__send-chat">
+                            <div class="tickets__send-message-from">
+                              <img class="tickets__send-message-avatar-img" src="images/avatar-user.png" alt="avatar">
+                              <div class="tickets__send-message-name">User: FK0395U90</div>
+                              <div class="tickets__send-message">
+                                <p>
+                                  Hello! I have a problem with Lable. Can you help me?
+                                </p>
+                                <span class="tickets__send-message-date">24 NOV</span>
+                              </div>
+                            </div>
+                            <div class="tickets__send-message-to">
+                              <img class="tickets__send-message-avatar-img" src="images/avatar-support.png"
+                                alt="avatar">
+                              <div class="tickets__send-message-name">Technical Support</div>
+                              <div class="tickets__send-message">
+                                <p>
+                                  Can you describe the problem in more detail
+                                </p>
+                                <span class="tickets__send-message-date">24 NOV</span>
+                              </div>
+                            </div>
+                            <div class="tickets__send-message-from">
+                              <img class="tickets__send-message-avatar-img" src="images/avatar-user.png" alt="avatar">
+                              <div class="tickets__send-message-name">User: FK0395U90</div>
+                              <div class="tickets__send-message">
+                                <p>
+                                  The downloading process continues and then nothing happens
+                                </p>
+                                <span class="tickets__send-message-date">24 NOV</span>
+                              </div>
+                            </div>
+                            <div class="tickets__send-message-to">
+                              <img class="tickets__send-message-avatar-img" src="images/avatar-support.png"
+                                alt="avatar">
+                              <div class="tickets__send-message-name">Technical Support</div>
+                              <div class="tickets__send-message">
+                                <p>
+                                  We fixed it, try again.
+                                </p>
+                                <span class="tickets__send-message-date">24 NOV</span>
+                              </div>
+                            </div>
+                            <div class="tickets__send-message-from">
+                              <img class="tickets__send-message-avatar-img" src="images/avatar-user.png" alt="avatar">
+                              <div class="tickets__send-message-name">User: FK0395U90</div>
+                              <div class="tickets__send-message">
+                                <p>
+                                  It's working, thank you
+                                </p>
+                                <span class="tickets__send-message-date">24 NOV</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tickets__send-chat-info">
+                            <span>------------------------------ Problem solved ------------------------------</span>
+                            <span>Ticket #48120 closed 25 NOV</span>
+                          </div>
+                          <div class="tickets__send-chat-bottom">
+                            <div class="add-file__box">
+                              <input class="add-file__input" type="file">
+                              <img class="add-file__img" src="images/icons/attach.svg" alt="img">
+                              <span class="add-file__text">Attach File</span>
+                            </div>
+                            <button class="btn">Send</button>
+                          </div>
+                        </div>
+                        <div class="tickets__send-bottom">
+                          <button class="tickets__send-bottom-btn" disabled>Close Ticket</button>
+                          <button class="tickets__send-bottom-btn" disabled>Open This Ticket Again</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="admin-support__tab-item tab-item" id="support-tab_2">
+                <div class="admin-support__compensations">
+                  <div class="admin-support__compensations-col-1">
+                    <div class="balance__elem-box">
+                      <span>Amount</span>
+                      <div class="balance__elem-input--box">
+                        <input class="balance__elem-input" type="text" readonly value="$250,50">
+                      </div>
+                    </div>
+                    <div class="balance__elem-box">
+                      <span>User ID</span>
+                      <button class="table__btn">
+                        <svg class="icon-plus">
+                          <use xlink:href="#plus"></use>
+                        </svg>
+                        <span>HS9TWSH</span>
+                      </button>
+                    </div>
+                    <div class="balance__elem-box">
+                      <span>A</span>
+                      <button class="btn">Compensate It</button>
+                    </div>
+                  </div>
+                  <div class="admin-support__compensations-col-2">
+                    <div class="balance__elem-box">
+                      <span>Trackers</span>
+                      <div class="admin-support__compensations-trackers">
+                        <span>7ocm3994mcipmas</span>
+                        <span>1ZW309R312708460</span>
+                        <span>4ied834kjs838on46</span>
+                        <span>90sau347jno289nb</span>
+                        <span>283xcv3849bvio048</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="admin-support__tab-item tab-item" id="support-tab_3">
+                <div class="tech-support">
+                  <div class="tech-support__create">
+                    <input class="tech-support__input" type="text" min="8" value="@XJXMBOC74">
+                    <button class="btn modal-open" data-path="modal-new-user-support">Create Support</button>
+                  </div>
+                  <div class="table-wrapper">
+                    <table class="tech-support__table">
+                      <tr>
+                        <th>Name</th>
+                        <th>Solved 24H</th>
+                        <th>Solved Week</th>
+                        <th>Solved Month</th>
+                        <th>Total Solved</th>
+                        <th>Password</th>
+                      </tr>
+                      <tr>
+                        <td>@OOXN39BC</td>
+                        <td>2</td>
+                        <td>5</td>
+                        <td>7</td>
+                        <td>13</td>
+                        <td>
+                          <button class="btn--action">RESET</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>@MN445CVN</td>
+                        <td>3</td>
+                        <td>9</td>
+                        <td>20</td>
+                        <td>45</td>
+                        <td>
+                          <button class="btn--action">RESET</button>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="admin-support__tab-item tab-item" id="support-tab_4">
+                <div class="tickets page-tickets-request-2">
+                  <div class="tickets__inner">
+                    <div class="tickets__head">
+                      <div class="tickets__head-item">
+                        <span>Support Answered</span>
+                        <div class="tickets__head-circle">
+                          00
+                        </div>
+                      </div>
+                      <div class="tickets__head-item">
+                        <span>Not Answered</span>
+                        <div class="tickets__head-circle">
+                          00
+                        </div>
+                      </div>
+                      <div class="tickets__head-item">
+                        <span>Not Resolved Tickets</span>
+                        <div class="tickets__head-circle">
+                          00
+                        </div>
+                      </div>
+                      <div class="tickets__head-item">
+                        <span>Resolved Tickets</span>
+                        <div class="tickets__head-circle">
+                          00
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tickets__content">
+                      <div class="tickets__search">
+                        <div class="search">
+                          <input class="search__input" type="text" placeholder="Search">
+                          <button class="search__btn">
+                            <svg class="icon-search">
+                              <use xlink:href="#search"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="tickets__search-list">
+                          <button class="tickets__search-list-item">
+                            <span class="tickets__search-list-text">User: FK0395U90</span>
+                            <div class="tickets__search-list-circles">
+
+                            </div>
+                          </button>
+                          <button class="tickets__search-list-item">
+                            <span class="tickets__search-list-text">User: XC8041L66</span>
+                            <div class="tickets__search-list-circles">
+                              <div class="tickets__head-circle">
+                                04
+                              </div>
+                              <div class="tickets__head-circle">
+                                02
+                              </div>
+                            </div>
+                          </button>
+                          <button class="tickets__search-list-item">
+                            <span class="tickets__search-list-text">User: GT5710Z51</span>
+                            <div class="tickets__search-list-circles">
+
+                            </div>
+                          </button>
+                          <button class="tickets__search-list-item">
+                            <span class="tickets__search-list-text">User: VB5466X74</span>
+                            <div class="tickets__search-list-circles">
+                              <div class="tickets__head-circle">
+                                01
+                              </div>
+                            </div>
+                          </button>
+                          <button class="tickets__search-list-item">
+                            <span class="tickets__search-list-text">User: RH2345B10</span>
+                            <div class="tickets__search-list-circles">
+                              <div class="tickets__head-circle">
+                                07
+                              </div>
+                              <div class="tickets__head-circle">
+                                03
+                              </div>
+                            </div>
+                          </button>
+                          <button class="tickets__search-list-item">
+                            <span class="tickets__search-list-text">User: UN0455Y75</span>
+                            <div class="tickets__search-list-circles">
+
+                            </div>
+                          </button>
+                          <button class="tickets__search-list-item">
+                            <span class="tickets__search-list-text">User: NM4567E66</span>
+                            <div class="tickets__search-list-circles">
+
+                            </div>
+                          </button>
+                        </div>
+                        <button class="btn">Send Message to User</button>
+                      </div>
+                      <div class="tickets__form-box">
+                        <form class="tickets__form">
+                          <h3 class="tickets__form-title">Answer To User</h3>
+                          <div class="tickets__form-inputs">
+                            <div class="tickets__form-input--box">
+                              <span class="tickets__form-input--placeholder">Type:</span>
+                              <input class="tickets__form-input" type="text" value="Regarding The Label">
+                            </div>
+                            <div class="tickets__form-input--box">
+                              <span class="tickets__form-input--placeholder">Track:</span>
+                              <input class="tickets__form-input" type="text" value="KN190LP333PY344">
+                            </div>
+                            <div class="tickets__form-input--box">
+                              <span class="tickets__form-input--placeholder">Priority:</span>
+                              <input class="tickets__form-input" type="text" value="Medium">
+                            </div>
+                          </div>
+                          <textarea class="tickets__form-input--box tickets__form-input--textarea"
+                            placeholder="White Your Message..."></textarea>
+                          <div class="tickets__send-chat-bottom">
+                            <div class="add-file__box">
+                              <input class="add-file__input" type="file">
+                              <img class="add-file__img" src="images/icons/attach.svg" alt="img">
+                              <span class="add-file__text">Attach File</span>
+                            </div>
+                            <button class="btn">Send</button>
+                          </div>
+                        </form>
+                        <div class="tickets__send-bottom">
+                          <button class="tickets__send-bottom-btn">Close Ticket</button>
+                          <button class="tickets__send-bottom-btn">Open This Ticket Again</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <!--=include modal.html-->
+  <script src="libs/jquery/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.umd.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

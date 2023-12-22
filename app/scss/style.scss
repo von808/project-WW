@@ -1,0 +1,27 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+@import 'blocks/header';
+@import 'blocks/footer';
+@import 'blocks/form';
+@import 'blocks/copy';
+@import 'blocks/checkbox';
+@import 'blocks/modal';
+
+@import 'components/sidebar';
+
+@import 'pages/index';
+@import 'pages/news';
+@import 'pages/sender-receiver';
+@import 'pages/purchases';
+@import 'pages/wallet';
+@import 'pages/templates';
+@import 'pages/tickets';
+@import 'pages/registration-and-login';
+@import 'pages/account';
+@import 'pages/admin';
+
+@import 'media';

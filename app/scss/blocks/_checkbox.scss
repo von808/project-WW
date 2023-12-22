@@ -1,0 +1,94 @@
+.checkbox {
+  &-label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  //============================================================CHECKBOX-CIRCLE
+
+  &-circle {
+    color: #4D4AFD;
+    text-transform: capitalize;
+  }
+
+  &-circle .checkbox-cstm {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+
+    background-color: transparent;
+    border: 2px solid #4D4AFD;
+  }
+
+  &-circle .checkbox-input:checked+.checkbox-cstm {
+    background-color: #4D4AFD;
+  }
+
+  //============================================================CHECKBOX-SWITCH
+
+  &-switch .checkbox-cstm {
+    width: 30px;
+    height: 15px;
+    border-radius: 11px;
+    border: 1px solid var(--Unactive-Text, #B0B0B0);
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background-color: #B0B0B0;
+      transition: all .2s ease;
+    }
+  }
+
+  &-switch .checkbox-input:checked+.checkbox-cstm::before {
+    left: 15px;
+    background-color: rgba(#00BE35, 0.68);
+  }
+
+  //============================================================CHECKBOX-ANGLE
+
+  &-angle {
+    position: absolute;
+    top: 10px;
+    left: -24px;
+  }
+
+  &-angle .checkbox-cstm {
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 4px;
+    background: #FFF;
+    position: relative;
+
+    .icon-chevron {
+      width: 14px;
+      height: 14px;
+      stroke: #242424;
+    }
+  }
+
+  &-angle .checkbox-input:checked+.checkbox-cstm {
+    background: #4D4AFD;
+
+    .icon-chevron {
+      stroke: #FFFFFF;
+    }
+  }
+}

@@ -1,0 +1,140 @@
+.input,
+.input-buffer {
+  color: #000;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  // letter-spacing: 0.05em;
+}
+
+.input {
+  width: 100px;
+  min-width: 100px;
+}
+
+.input-buffer {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+.copy-box {
+  display: flex;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  gap: 10px;
+  flex-direction: row-reverse;
+}
+
+.btn__copy.copied {
+  .icon-copy {
+    stroke: #00BE35;
+  }
+
+  &~.input {
+    color: #00BE35;
+  }
+}
+
+.api__copy {
+
+  .copy-box {
+    padding: 8px 35px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+
+    border-radius: 4px;
+    border: 1px solid #E7EBEE;
+    background: #FFF;
+  }
+
+  .input {
+    width: 255px;
+    min-width: 255px;
+
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+
+.modals__sender-receiver {
+  .copy-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .input {
+    width: 135px;
+    min-width: 135px;
+
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &--confirm .input {
+    color: #B0B0B0;
+  }
+
+  &--confirmed .input {
+    width: 141px;
+    min-width: 141px;
+
+    color: #000;
+  }
+}
+
+.purchases__item {
+  .copy-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .input {
+    width: 123px;
+    min-width: 123px;
+
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .icon-copy {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.modals__new-user {
+  .input {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .modal-content__item:nth-child(1) .copy-box .input {
+    min-width: 91px;
+    width: 91px;
+  }
+
+  .modal-content__item:nth-child(2) .input {
+    min-width: 155px;
+    width: 155px;
+  }
+}
+
+.modals__new-user-support {
+  .input {
+    min-width: 155px !important;
+    width: 155px !important;
+
+    font-size: 16px;
+    font-weight: 400;
+  }
+}

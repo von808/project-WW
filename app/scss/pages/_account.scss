@@ -1,0 +1,110 @@
+.account {
+  &__inner {
+    max-width: 830px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+
+    .account__item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 25px 30px 20px;
+      background-color: #fff;
+    }
+  }
+
+  &__item {
+    width: 100%;
+  }
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__text-placeholder {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__text {
+    font-size: 20px;
+    font-weight: 700;
+
+    .copy-box .input {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+  }
+
+  &__item-img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+  }
+
+  &__bottom {
+    padding: 25px 0 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 40px;
+    background-color: #fff;
+
+    .account__item {
+      padding: 0 30px 0;
+    }
+
+    .copy-box {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  &__user-input {
+    min-width: 98px;
+    width: 98px;
+    max-width: 153px;
+  }
+
+  &__contact-input {
+    min-width: 124px;
+    width: 124px;
+    max-width: 153px;
+  }
+
+  &__password-input {
+    min-width: 118px;
+    width: 118px;
+    max-width: 153px;
+    -webkit-text-security: circle;
+  }
+
+  .replacer {
+    border: 1px #666 dotted;
+    height: 20px;
+    display: inline-block;
+    color: #444;
+    background: #eee
+  }
+
+  .replacer.current {
+    border-color: #ccc;
+    color: #000;
+    background: #fff
+  }
+}

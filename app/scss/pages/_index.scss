@@ -1,0 +1,123 @@
+.api {
+  &__form {
+    height: 35px;
+    padding: 8px 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    border-radius: 4px;
+    border: 1px solid #E7EBEE;
+    background: #FFF;
+  }
+
+  &__input {
+    display: block;
+    min-width: 255px;
+    height: 19px;
+
+    color: #000;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0px;
+  }
+
+  &__copy {
+    margin-bottom: 30px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+
+  }
+
+  &__params {
+    margin-bottom: 60px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 60px;
+  }
+
+  &__item-title {
+    margin-bottom: 5px;
+
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  &__item-wrapper {
+    overflow-x: auto;
+    max-width: 100%;
+    width: calc(100vw - 285px - 30px);
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      min-height: 35px;
+      padding: 8px 25px;
+      border: 1px solid #E7EBEE;
+      white-space: nowrap;
+      font-size: 14px;
+      vertical-align: top;
+    }
+
+    th {
+      text-align-last: left;
+      background: #F5FEFB;
+
+      font-weight: 700;
+    }
+
+    td {
+      background: #FFF;
+
+      font-weight: 400;
+    }
+
+    tr th {
+
+      &:nth-child(1),
+      &:nth-child(4) {
+        min-width: 200px;
+        width: 200px;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        min-width: 130px;
+        width: 130px;
+      }
+
+      &:last-child {
+        width: auto;
+      }
+    }
+  }
+
+  &__request-list {
+    padding: 40px;
+    border: 1px solid #E7EBEE;
+    background: #FFF;
+    white-space: nowrap;
+
+    display: flex;
+    flex-direction: column;
+
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

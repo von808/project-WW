@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,600;6..12,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!--=include sprite.html-->
+  <div class="wrapper page-news">
+    <!--=include sidebar.html-->
+    <main class="main">
+      <section class="news">
+        <div class="container">
+          <div class="news__inner">
+            <div class="title-box">
+              <h2 class="title">actual news</h2>
+            </div>
+            <div class="news__items">
+              <div class="news__item">
+                <picture>
+                  <source type="image/avif" srcset="images/news/news-1.avif">
+                  <source type="image/webp" srcset="images/news/news-1.webp">
+                  <img class="news__img" src="images/news/news-1.jpg" alt="news">
+                </picture>
+                <div class="news__info">
+                  <h2 class="news__title">AM Express has announced new service</h2>
+                  <p class="news__date"><time>10/26/2023 5:50</time> AM EST</p>
+                  <div class="news__descr">
+                    <p>
+                      AM Express has announced the launch of a new service for shipments between the U.S. and China The
+                      new service will
+                      enable AM Express customers to quickly and reliably deliver their shipments from China to the U.S.
+                      and vice versa.
+                    </p>
+                    <p>
+                      With the new service, customers will be able to reduce the delivery time of their goods to a few
+                      days, which will
+                      significantly speed up the process of trade between the two countries. In addition, the company
+                      provides a wide range of
+                      services, including packaging and customs clearance.
+                    </p>
+                    <p>
+                      The new service is already available to customers in New York and Los Angeles, and will soon be
+                      expanded to other US
+                      cities.
+                    </p>
+                  </div>
+                </div>
+                <label class="checkbox-label checkbox-circle">
+                  <input class="checkbox-input input-hidden" type="checkbox">
+                  <div class="checkbox-cstm"></div>
+                  <span class="news__read-on">Mark As Read</span>
+                  <span class="news__read-off">has been read</span>
+                </label>
+              </div>
+              <div class="news__item">
+                <picture>
+                  <source type="image/avif" srcset="images/news/news-2.avif">
+                  <source type="image/webp" srcset="images/news/news-2.webp">
+                  <img class="news__img" src="images/news/news-2.jpg" alt="news">
+                </picture>
+                <div class="news__info">
+                  <h2 class="news__title">Exchange Rate</h2>
+                  <p class="news__date"><time>10/26/2023 5:50</time> AM EST</p>
+                  <div class="news__descr">
+                    <p>
+                      The dollar exchange rate against the euro continues to fluctuate within one percent. Experts
+                      believe that this is due to
+                      uncertainty in the oil market and possible influence of political events in Europe on the dollar
+                      rate.
+                    </p>
+                  </div>
+                </div>
+                <label class="checkbox-label checkbox-circle">
+                  <input class="checkbox-input input-hidden" type="checkbox">
+                  <div class="checkbox-cstm"></div>
+                  <span class="news__read-on">Mark As Read</span>
+                  <span class="news__read-off">has been read</span>
+                </label>
+              </div>
+              <a class="news__more" href="#!">View News History</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <!--=include modal.html-->
+  <script src="libs/jquery/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.umd.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

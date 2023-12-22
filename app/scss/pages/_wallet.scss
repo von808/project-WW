@@ -1,0 +1,164 @@
+.balance {
+  margin-bottom: 80px;
+
+  &__inner {
+    max-width: 800px;
+  }
+
+  &__content {
+    display: flex;
+    gap: 20px 40px;
+  }
+
+  &__content-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &:nth-child(2) {
+      text-align: center;
+      min-width: 250px;
+
+      .balance__elem-box span {
+        padding: 0;
+      }
+    }
+  }
+
+  &__elem-box--payment {}
+
+  &__elem-box--btn {
+    flex: 1;
+  }
+
+  &__elem-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    span {
+      padding-left: 25px;
+
+      font-size: 12px;
+      font-weight: 300;
+    }
+
+    .btn {
+      width: 100%;
+      margin-top: auto;
+    }
+  }
+
+  &__elem-input--box {
+    width: 100%;
+    height: 35px;
+    padding: 8px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 4px;
+    border: 1px solid #E7EBEE;
+    background: #FFF;
+
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__elem-input--box-btns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 120px));
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__elem-input {
+    text-align: center;
+  }
+
+  &__elem-btn {
+    width: 120px;
+    height: 35px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+
+    border-radius: 4px;
+    border: 1px solid #E7EBEE;
+    background: #FFF;
+
+    img {
+      display: block;
+      width: auto;
+      height: 18.5px;
+      pointer-events: none;
+    }
+  }
+}
+
+.history {
+  &__inner {
+    max-width: 800px;
+  }
+
+  &__search-box {
+    display: grid;
+    grid-template-columns: auto minmax(auto, 200px);
+    gap: 40px;
+    margin-bottom: 20px;
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  &__content {}
+
+  &__table {
+    border-collapse: collapse;
+
+    th,
+    td {
+      min-height: 35px;
+      padding: 8px 12px;
+      border: 1px solid #E7EBEE;
+      text-align: left;
+      vertical-align: top;
+
+      &:nth-child(1) {
+        min-width: 130px;
+      }
+
+      &:nth-child(2) {
+        min-width: 110px;
+      }
+
+      &:nth-child(3) {
+        min-width: 320px;
+      }
+
+      &:nth-child(4) {
+        min-width: 100px;
+      }
+
+      &:nth-child(5) {
+        min-width: 140px;
+      }
+    }
+  }
+
+  &__table-head {
+    background: #F5FEFB;
+  }
+
+  td {
+    background: #FFF;
+  }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,600;6..12,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!--=include sprite.html-->
+  <div class="wrapper page-account">
+    <!--=include sidebar.html-->
+    <main class="main">
+      <section class="account">
+        <div class="container">
+          <div class="account__inner">
+            <div class="title-box">
+              <h2 class="title title--up">account</h2>
+            </div>
+            <div class="account__content">
+              <div class="account__top">
+                <div class="account__item">
+                  <div class="account__text-box">
+                    <span class="account__text-placeholder">Your Amount</span>
+                    <div class="account__text">$14054.50</div>
+                  </div>
+                  <img class="account__item-img" src="images/icons/balance.svg" alt="icon">
+                </div>
+                <div class="account__item">
+                  <div class="account__text-box">
+                    <span class="account__text-placeholder">Your Purchases</span>
+                    <div class="account__text">12</div>
+                  </div>
+                  <img class="account__item-img" src="images/icons/purchases.svg" alt="icon">
+                </div>
+                <div class="account__item">
+                  <div class="account__text-box">
+                    <span class="account__text-placeholder">Your Tickets</span>
+                    <div class="account__text">6</div>
+                  </div>
+                  <img class="account__item-img" src="images/icons/support.svg" alt="icon">
+                </div>
+              </div>
+              <div class="account__bottom">
+                <div class="account__item">
+                  <div class="account__text-box">
+                    <span class="account__text-placeholder">User ID</span>
+                    <div class="account__text">
+                      <div class="copy-box account__user-box">
+                        <button class="btn__copy account__user-btn" onclick="copy('copy-user')">
+                          <svg class="icon-copy">
+                            <use xlink:href="#icon-copy"></use>
+                          </svg>
+                        </button>
+                        <input class="input account__user-input" id="copy-user" type="text" value="92JSIEPTL">
+                        <div class="input-buffer"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="account__item">
+                  <div class="account__text-box">
+                    <span class="account__text-placeholder">Contact (Telegram or JID)</span>
+                    <div class="account__text">
+                      <div class="copy-box account__contact-box">
+                        <button class="btn__copy account__contact-btn">
+                          <svg class="icon-copy">
+                            <use xlink:href="#edit"></use>
+                          </svg>
+                        </button>
+                        <input class="input account__contact-input" type="text" value="@Label_User">
+                        <div class="input-buffer"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="account__item account__item--exit">
+                  <button class="btn">Log Out</button>
+                </div>
+                <div class="account__item">
+                  <div class="account__text-box">
+                    <span class="account__text-placeholder">Member Since</span>
+                    <div class="account__text">August, 2023</div>
+                  </div>
+                </div>
+                <div class="account__item">
+                  <div class="account__text-box">
+                    <span class="account__text-placeholder">Change Password</span>
+                    <div class="account__text">
+                      <div class="copy-box account__password-box">
+                        <button class="btn__copy account__password-btn">
+                          <svg class="icon-copy">
+                            <use xlink:href="#edit"></use>
+                          </svg>
+                        </button>
+                        <input class="input account__password-input" type="password" value="11111111111">
+                        <div class="input-buffer"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <!--=include modal.html-->
+  <script src="libs/jquery/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.umd.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

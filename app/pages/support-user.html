@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin support</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,600;6..12,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!--=include sprite.html-->
+  <div class="wrapper page-support-user">
+    <!--=include sidebar-support.html-->
+    <main class="main">
+      <section class="support-user">
+        <div class="container">
+          <div class="support-user__inner">
+            <div class="support-user__dropdown">
+              <div class="form-group">
+                <div class="dropdown">
+                  <svg class="icon-chevron">
+                    <use xlink:href="#chevron"></use>
+                  </svg>
+                  <button class="dropdown__button" type="button">
+                    <span class="dropdown__list-item-content">Select User</span>
+                  </button>
+                  
+                  <input type="text" name="select-category" value="medium" class="dropdown__input-hidden">
+                </div>
+              </div>
+            </div>
+            <div class="purchases__items-wrapper">
+              <div class="purchases__items-box">
+                <div class="purchases__item purchases__items-head">
+                  <div>SENDER</div>
+                  <span class="purchases__item-line"></span>
+                  <div>WEIGHT</div>
+                  <span class="purchases__item-line"></span>
+                  <div>Reciever</div>
+                  <span class="purchases__item-line"></span>
+                  <div>status</div>
+                  <span class="purchases__item-line"></span>
+                  <div>tracking</div>
+                  <span class="purchases__item-line"></span>
+                  <div>tracking</div>
+                </div>
+                <div class="purchases__items">
+                  <div class="purchases__item-box">
+                    <label class="checkbox-label checkbox-angle">
+                      <input class="checkbox-input input-hidden" type="checkbox">
+                      <div class="checkbox-cstm">
+                        <svg class="icon-chevron">
+                          <use xlink:href="#chevron"></use>
+                        </svg>
+                      </div>
+                    </label>
+                    <div class="purchases__item">
+                      <div class="purchases__item-col">
+                        <span>Dennis Chapman</span>
+                        <span>1923 McDonald Ave</span>
+                        <span>Brooklyn NY 11223</span>
+                      </div>
+                      <span class="purchases__item-line"></span>
+                      <div class="purchases__item-col">
+                        <span>3.00 LB.</span>
+                        <span>10000 / @admin</span>
+                      </div>
+                      <span class="purchases__item-line"></span>
+                      <div class="purchases__item-col">
+                        <span>Rick Star</span>
+                        <span>3534 Broadway</span>
+                        <span>New York NY 10031</span>
+                      </div>
+                      <span class="purchases__item-line"></span>
+                      <div class="purchases__item-col">
+                        <span class="text text--green">Delivered</span>
+                      </div>
+                      <span class="purchases__item-line"></span>
+                      <div class="purchases__item-col">
+                        <span>UPS 3 Day Select</span>
+                        <div class="copy-box">
+                          <button class="btn__copy" onclick="copy('copy-purchases-1')">
+                            <svg class="icon-copy">
+                              <use xlink:href="#icon-copy"></use>
+                            </svg>
+                          </button>
+                          <input class="input" id="copy-purchases-1" readonly type="text" value="1ZW309R312708460">
+                          <div class="input-buffer"></div>
+                        </div>
+                        <span>09 Nov, 2023</span>
+                      </div>
+                      <span class="purchases__item-line"></span>
+                      <div class="purchases__item-col">
+                        <button class="btn--action">download</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="purchases__item-box">
+                    <label class="checkbox-label checkbox-angle">
+                      <input class="checkbox-input input-hidden" type="checkbox">
+                      <div class="checkbox-cstm">
+                        <svg class="icon-chevron">
+                          <use xlink:href="#chevron"></use>
+                        </svg>
+                      </div>
+                    </label>
+                    <div class="purchases__item">
+                      <div class="purchases__item-col">
+                        <span>Mac C Jones</span>
+                        <span>4251 Jenna Lane</span>
+                        <span>Ohio OH,45202</span>
+                      </div>
+                      <span class="purchases__item-line"></span>
+                      <div class="purchases__item-col">
+                        <span>45.00 LB.</span>
+                        <span>10000 / @admin</span>
+                      </div>
+                      <span class="purchases__item-line"></span>
+                      <div class="purchases__item-col">
+                        <span>Richard D McCaskill</span>
+                        <span>1731 Margaret Street</span>
+                        <span>Texas TX 77478</span>
+                      </div>
+                      <span class="purchases__item-line"></span>
+                      <div class="purchases__item-col">
+                        <span class="text text--muted">Cancel</span>
+                      </div>
+                      <span class="purchases__item-line"></span>
+                      <div class="purchases__item-col">
+                        <span>FedEx 3 Day Select</span>
+                        <div class="copy-box">
+                          <button class="btn__copy" onclick="copy('copy-purchases-2')">
+                            <svg class="icon-copy">
+                              <use xlink:href="#icon-copy"></use>
+                            </svg>
+                          </button>
+                          <input class="input" id="copy-purchases-2" readonly type="text" value="38SHU3487XCB3248">
+                          <div class="input-buffer"></div>
+                        </div>
+                        <span>12 Oct, 2023</span>
+                      </div>
+                      <span class="purchases__item-line"></span>
+                      <div class="purchases__item-col">
+                      <button class="btn--action">download</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <!--=include modal.html-->
+  <script src="libs/jquery/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.umd.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

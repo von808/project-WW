@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin wallet</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,600;6..12,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!--=include sprite.html-->
+  <div class="wrapper page-admin-wallet page-wallet">
+    <!--=include sidebar-admin.html-->
+    <main class="main">
+      <section class="balance admin-wallet">
+        <div class="container">
+          <div class="balance__inner">
+            <div class="title-box">
+              <h2 class="title title--up">total balance</h2>
+            </div>
+            <div class="balance__content">
+              <div class="balance__content-col">
+                <div class="balance__elem-box">
+                  <span>Your Amount</span>
+                  <div class="balance__elem-input--box">
+                    <input class="balance__elem-input" type="text" readonly value="$14054.50">
+                    <div class="input-buffer"></div>
+                  </div>
+                </div>
+                <div class="balance__elem-box">
+                  <span>Last Trasaction</span>
+                  <div class="balance__elem-input--box">
+                    <input class="balance__elem-input" type="text" readonly value="$7.51">
+                  </div>
+                </div>
+                <div class="balance__elem-box">
+                  <span>Payouts & Taxes</span>
+                  <div class="balance__elem-input--box">
+                    <svg class="icon-use">
+                      <use xlink:href="#use"></use>
+                    </svg>
+                    Withdraw
+                  </div>
+                </div>
+              </div>
+              <div class="balance__content-col">
+                <div class="balance__elem-box balance__elem-box--choise">
+                  <span>Please Choose Amount for auto-replenishment</span>
+                  <div class="balance__elem-input--box">
+                    <input class="balance__elem-input" type="text" readonly value="$1512.55">
+                  </div>
+                </div>
+                <div class="balance__elem-box balance__elem-box--payment">
+                  <span>Payment Method</span>
+                  <div class="balance__elem-input--box-btns">
+                    <button class="balance__elem-btn" id="wallet-payment-1">
+                      <img src="images/icons/pay-crypto.png" alt="pay">
+                      Crypto
+                    </button>
+                    <button class="balance__elem-btn" id="wallet-payment-2">
+                      <img src="images/icons/pay-venmo.png" alt="pay">
+                      Venmo
+                    </button>
+                    <button class="balance__elem-btn" id="wallet-payment-3">
+                      <img src="images/icons/pay-paypal.png" alt="pay">
+                      PayPal
+                    </button>
+                    <button class="balance__elem-btn" id="wallet-payment-4">
+                      <img src="images/icons/pay-cash.png" alt="pay">
+                      CashApp
+                    </button>
+                  </div>
+                </div>
+                <div class="balance__elem-box balance__elem-box--btn">
+                  <button class="btn">Make Payment</button>
+                </div>
+              </div>
+            </div>
+            <div class="admin-wallet__checkboxes-box">
+              <div></div>
+              <div class="admin-wallet__checkboxes">
+                <h5 class="admin-wallet__checkboxes-title">Turn On/Off Payment Method</h5>
+                <div class="admin-wallet__checkboxes-items">
+                  <label class="checkbox-label checkbox-switch">
+                    <input class="checkbox-input input-hidden" id="wallet-checkbox-1" type="checkbox" checked>
+                    <div class="checkbox-cstm"></div>
+                    <span>Crypto</span>
+                  </label>
+                  <label class="checkbox-label checkbox-switch">
+                    <input class="checkbox-input input-hidden" id="wallet-checkbox-2" type="checkbox" checked>
+                    <div class="checkbox-cstm"></div>
+                    <span>Venmo</span>
+                  </label>
+                  <label class="checkbox-label checkbox-switch">
+                    <input class="checkbox-input input-hidden" id="wallet-checkbox-3" type="checkbox" checked>
+                    <div class="checkbox-cstm"></div>
+                    <span>PayPal</span>
+                  </label>
+                  <label class="checkbox-label checkbox-switch">
+                    <input class="checkbox-input input-hidden" id="wallet-checkbox-4" type="checkbox" checked>
+                    <div class="checkbox-cstm"></div>
+                    <span>CashApp</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="history">
+        <div class="container">
+          <div class="history__inner">
+            <div class="title-box">
+              <h2 class="title title--up">transaction history</h2>
+            </div>
+            <div class="history__search-box">
+              <div class="search">
+                <input class="search__input" type="text" placeholder="Search">
+                <button class="search__btn">
+                  <svg class="icon-search">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </button>
+              </div>
+              <button class="btn">Export</button>
+            </div>
+            <div class="history__content">
+              <div class="table-wrapper">
+                <table class="history__table">
+                  <tr class="history__table-head">
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Total</th>
+                    <th>Balance</th>
+                  </tr>
+                  <tr class="history__table-row">
+                    <td>
+                      <div>10/23/23</div>
+                      <div>9:14:57</div>
+                    </td>
+                    <td>Refund</td>
+                    <td>Laura Vann: Refund for <br>
+                      12CO79522305471 to Laura Vann</td>
+                    <td>$7.51</td>
+                    <td>$682.28</td>
+                  </tr>
+                  <tr class="history__table-row">
+                    <td>
+                      <div>10/24/23</div>
+                      <div>10:12:00</div>
+                    </td>
+                    <td>Label</td>
+                    <td>Laura Vann: 1 Label Batch</td>
+                    <td class="text--orange">-$7.51</td>
+                    <td>$1280.07</td>
+                  </tr>
+                  <tr class="history__table-row">
+                    <td>
+                      <div>10/27/23</div>
+                      <div>3:17:47</div>
+                    </td>
+                    <td>Refund</td>
+                    <td>Jasper Orion: Refund for <br>
+                      12CO79522305471 to Jasper Orion</td>
+                    <td>$12.21</td>
+                    <td>$321.00</td>
+                  </tr>
+                  <tr class="history__table-row">
+                    <td>
+                      <div>10/27/23</div>
+                      <div>8:50:00</div>
+                    </td>
+                    <td>Refund</td>
+                    <td>Kolin Mixer: Refund for <br>
+                      12CO79522305471 to Kolin Mixer</td>
+                    <td>$32.81</td>
+                    <td>$447.84</td>
+                  </tr>
+                  <tr class="history__table-row">
+                    <td>
+                      <div>10/28/23</div>
+                      <div>11:22:35</div>
+                    </td>
+                    <td>Label</td>
+                    <td>Kolin Mixer: 1 Label Batch</td>
+                    <td class="text--color">-$5.17</td>
+                    <td>$682.28</td>
+                  </tr>
+                  <tr class="history__table-row">
+                    <td>
+                      <div>10/28/23</div>
+                      <div>12:55:57</div>
+                    </td>
+                    <td>Label</td>
+                    <td>Kolin Mixer: 1 Label Batch</td>
+                    <td class="text--orange">-$198.17</td>
+                    <td>$894.14</td>
+                  </tr>
+                  <tr class="history__table-row">
+                    <td>
+                      <div>10/30/23</div>
+                      <div>7:19:57</div>
+                    </td>
+                    <td>Refund</td>
+                    <td>Karl Wills: Refund for <br>
+                      12CO79522305471 to Karl Wills</td>
+                    <td>$71.22</td>
+                    <td>$1270.55</td>
+                  </tr>
+                  <tr class="history__table-row">
+                    <td>
+                      <div>10/30/23</div>
+                      <div>12:25:00</div>
+                    </td>
+                    <td>Refund</td>
+                    <td>Julia Lopes: Refund for <br>
+                      12CO79522305471 to Julia Lopes</td>
+                    <td>$15.71</td>
+                    <td>$102.34</td>
+                  </tr>
+                  <tr class="history__table-row">
+                    <td>
+                      <div>11/01/23</div>
+                      <div>10:17:25</div>
+                    </td>
+                    <td>Label</td>
+                    <td>Karl Wills: 1 Label Batch</td>
+                    <td class="text--color">-$71.22</td>
+                    <td>$33.59</td>
+                  </tr>
+                  <tr class="history__table-row">
+                    <td>
+                      <div>11/01/23</div>
+                      <div>12:05:08</div>
+                    </td>
+                    <td>Label</td>
+                    <td>Julia Lopes: 1 Label Batch</td>
+                    <td class="text--color">-$15.17</td>
+                    <td>$682.28</td>
+                  </tr>
+                  <tr class="history__table-row">
+                    <td>
+                      <div>11/03/23</div>
+                      <div>9:44:07</div>
+                    </td>
+                    <td>Refund</td>
+                    <td>Danny Romero: Refund for <br>
+                      12CO79522305471 to Danny Romero</td>
+                    <td>$22.16</td>
+                    <td>$2170.53</td>
+                  </tr>
+                  <tr class="history__table-row">
+                    <td>
+                      <div>11/04/23</div>
+                      <div>10:17:09</div>
+                    </td>
+                    <td>Label</td>
+                    <td>Danny Romero: 1 Label Batch</td>
+                    <td class="text--color">-$22.16</td>
+                    <td>$51.25</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <!--=include modal.html-->
+  <script src="libs/jquery/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.umd.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

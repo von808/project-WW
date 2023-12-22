@@ -1,0 +1,358 @@
+<div class="modals">
+  <div class="modal-overlay">
+    <div class="modal modals__sender-receiver" data-target="modal-sender-receiver-confirm">
+      <div class="modal__sender-receiver modals__sender-receiver--confirm">
+        <button class="modal-close" style="display: none;">Закрыть</button>
+        <div class="modal-content">
+          <div class="modal-content__top">
+            <div class="modal-content__top-item">
+              <h2 class="modal-content__top-title">Sender</h2>
+              <span>Marten Fourcade</span>
+              <span>5343 W Imperial Hwy</span>
+              <span>Los Angeles CA 90045</span>
+            </div>
+            <svg class="icon-arrow-green">
+              <use xlink:href="#arrow-green"></use>
+            </svg>
+            <div class="modal-content__top-item">
+              <h2 class="modal-content__top-title">Reciever</h2>
+              <span>Viktor Krukov</span>
+              <span>5 San Main St</span>
+              <span>for 62705</span>
+              <span>Englishtown NJ 07726</span>
+            </div>
+          </div>
+          <hr>
+          <div class="modal-content__middle">
+            <div class="modal-content__middle-item">
+              Delivery Service:
+              <span>FedEx</span>
+            </div>
+            <div class="modal-content__middle-item">
+              <span>3 Days</span>
+            </div>
+            <div class="modal-content__middle-item">
+              Weight:
+              <span>17 Lb.</span>
+            </div>
+            <div class="modal-content__middle-item">
+              Tracker Number:
+              <span>
+                <div class="copy-box">
+                  <button class="btn__copy" onclick="copy('copy-sender-receiver-1')">
+                    <svg class="icon-copy">
+                      <use xlink:href="#icon-copy"></use>
+                    </svg>
+                  </button>
+                  <input class="input" id="copy-sender-receiver-1" type="text" value="00000000000000">
+                  <div class="input-buffer"></div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <hr>
+          <div class="modal-content__bottom">
+            <button class="btn--cancel modal-close">Cancel</button>
+            <button class="btn" data-path="modal-sender-receiver-confirmed">Confirm Payment</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modals__sender-receiver" data-target="modal-sender-receiver-confirmed">
+      <div class="modal__sender-receiver modals__sender-receiver--confirmed">
+        <button class="modal-close" style="display: none;">Закрыть</button>
+        <div class="modal-content">
+          <div class="modal-content__top">
+            <div class="modal-content__top-item">
+              <h2 class="modal-content__top-title">Sender</h2>
+              <span>Marten Fourcade</span>
+              <span>5343 W Imperial Hwy</span>
+              <span>Los Angeles CA 90045</span>
+            </div>
+            <svg class="icon-arrow-green">
+              <use xlink:href="#arrow-green"></use>
+            </svg>
+            <div class="modal-content__top-item">
+              <h2 class="modal-content__top-title">Reciever</h2>
+              <span>Viktor Krukov</span>
+              <span>5 San Main St</span>
+              <span>for 62705</span>
+              <span>Englishtown NJ 07726</span>
+            </div>
+          </div>
+          <hr>
+          <div class="modal-content__middle">
+            <div class="modal-content__middle-item">
+              Delivery Service:
+              <span>FedEx</span>
+            </div>
+            <div class="modal-content__middle-item">
+              <span>3 Days</span>
+            </div>
+            <div class="modal-content__middle-item">
+              Weight:
+              <span>17 Lb.</span>
+            </div>
+            <div class="modal-content__middle-item">
+              Tracker Number:
+              <span>
+                <div class="copy-box">
+                  <button class="btn__copy" onclick="copy('copy-sender-receiver-2')">
+                    <svg class="icon-copy">
+                      <use xlink:href="#icon-copy"></use>
+                    </svg>
+                  </button>
+                  <input class="input"  id="copy-sender-receiver-2" type="text" value="RT324Bb938op49">
+                  <div class="input-buffer"></div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <hr>
+          <div class="modal-content__bottom">
+            <button class="btn--cancel modal-close">Cancel</button>
+            <button class="btn" data-path="modal-sender-receiver-rate">Download</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modals__sender-receiver--rate" data-target="modal-sender-receiver-rate">
+      <button class="modal-close" style="display: none;">Закрыть</button>
+      <div class="modal-content">
+        <h3 class="modal-content__title">Exchange Rate</h3>
+        <div class="modal-content__date"><time>10/26/2023 5:50</time> AM EST</div>
+        <p>
+          The dollar exchange rate against the euro continues to fluctuate within one percent. Experts believe that this
+          is due to
+          uncertainty in the oil market and possible influence of political events in Europe on the dollar rate.
+        </p>
+        <a class="modal-content__readmore" href="#!">READ MORE</a>
+      </div>
+    </div>
+    <div class="modal modals__password" data-target="modal-password-1">
+      <button class="modal-close" style="display: none;">Закрыть</button>
+      <div class="modal-content">
+        <h3 class="modal-content__title">Your Password:</h3>
+        <div class="copy-box">
+          <button class="btn__copy" onclick="copy('copy-password-1')">
+            <svg class="icon-copy">
+              <use xlink:href="#icon-copy"></use>
+            </svg>
+          </button>
+          <input class="input" type="text" id="copy-password-1" value="m4#Ori_349_[]uw5">
+          <div class="input-buffer"></div>
+        </div>
+        <span class="modals__password-text">You must save your password</span>
+        <button class="btn modal-close" disabled>OK</button>
+      </div>
+    </div>
+    <div class="modal modals__password" data-target="modal-password-2">
+      <button class="modal-close" style="display: none;">Закрыть</button>
+      <div class="modal-content">
+        <h3 class="modal-content__title">Your Password:</h3>
+        <div class="copy-box">
+          <button class="btn__copy" onclick="copy('copy-password-2')">
+            <svg class="icon-copy">
+              <use xlink:href="#icon-copy"></use>
+            </svg>
+          </button>
+          <input class="input" type="text" id="copy-password-2" value="m4#Ori_349_[]uw5">
+          <div class="input-buffer"></div>
+        </div>
+        <span class="modals__password-text">You must save your password</span>
+        <button class="btn modal-close">OK</button>
+      </div>
+    </div>
+    <div class="modal modals__new-user" data-target="modal-new-user">
+      <button class="modal-close" style="display: none;">Закрыть</button>
+      <div class="modal-content">
+        <h3 class="modal-content__title">new user</h3>
+        <div class="modal-content__items">
+          <div class="modal-content__item">
+            <h4 class="modal-content__item-title">user id:</h4>
+            <div class="copy-box">
+              <button class="btn__copy" onclick="copy('copy-new-user-1')">
+                <svg class="icon-copy">
+                  <use xlink:href="#icon-copy"></use>
+                </svg>
+              </button>
+              <input class="input" type="text" id="copy-new-user-1" value="GT89FVb81">
+              <div class="input-buffer"></div>
+            </div>
+          </div>
+          <div class="modal-content__item">
+            <h4 class="modal-content__item-title">password:</h4>
+            <div class="copy-box">
+              <button class="btn__copy" onclick="copy('copy-new-user-2')">
+                <svg class="icon-copy">
+                  <use xlink:href="#icon-copy"></use>
+                </svg>
+              </button>
+              <input class="input input-1" type="text" id="copy-new-user-2" value="m4#Ori_349_[]uw5">
+              <div class="input-buffer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modals__price-show" data-target="modal-price-show">
+      <button class="modal-close" style="display: none;">Закрыть</button>
+      <div class="modal-content">
+        <div class="modal-content__items">
+          <div class="modal-content__item">
+            <div class="table-wrapper">
+              <table class="modal-content__table">
+                <tr>
+                  <th>UPS</th>
+                  <th>Insurance</th>
+                  <th>Price</th>
+                </tr>
+                <tr>
+                  <td>UPS Ground</td>
+                  <td>0</td>
+                  <td>$5000</td>
+                </tr>
+                <tr>
+                  <td>UPS 3 day</td>
+                  <td>1</td>
+                  <td>$5000</td>
+                </tr>
+                <tr>
+                  <td>UPS 2 day</td>
+                  <td>0</td>
+                  <td>$5000</td>
+                </tr>
+                <tr>
+                  <td>UPS 1 day</td>
+                  <td>1</td>
+                  <td>$5000</td>
+                </tr>
+                <tr>
+                  <td>UPS International</td>
+                  <td>1</td>
+                  <td>$5000</td>
+                </tr>
+                <tr>
+                  <td>White UPS Ground</td>
+                  <td>1</td>
+                  <td>$5000</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="modal-content__item">
+            <div class="table-wrapper">
+              <table class="modal-content__table">
+                <tr>
+                  <th>FedEx</th>
+                  <th>Insurance</th>
+                  <th>Price</th>
+                </tr>
+                <tr>
+                  <td>FedEx Ground</td>
+                  <td>0</td>
+                  <td>$5000</td>
+                </tr>
+                <tr>
+                  <td>FedEx 3 day</td>
+                  <td>1</td>
+                  <td>$5000</td>
+                </tr>
+                <tr>
+                  <td>FedEx 2 day</td>
+                  <td>0</td>
+                  <td>$5000</td>
+                </tr>
+                <tr>
+                  <td>FedEx 1 day</td>
+                  <td>1</td>
+                  <td>$5000</td>
+                </tr>
+                <tr>
+                  <td>FedEx International</td>
+                  <td>1</td>
+                  <td>$5000</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="modal-content__item">
+            <div class="table-wrapper">
+              <table class="modal-content__table">
+                <tr>
+                  <th>US Mail</th>
+                  <th>Insurance</th>
+                  <th>Price</th>
+                </tr>
+                <tr>
+                  <td>Priority</td>
+                  <td>0</td>
+                  <td>$5000</td>
+                </tr>
+                <tr>
+                  <td>Express</td>
+                  <td>1</td>
+                  <td>$5000</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="modal-content__item">
+            <div class="table-wrapper">
+              <table class="modal-content__table">
+                <tr>
+                  <th>UPS</th>
+                  <th>UPS White</th>
+                </tr>
+                <tr>
+                  <td>Start Discount</td>
+                  <td>$50000</td>
+                </tr>
+                <tr>
+                  <td>50 Purchases off</td>
+                  <td>$50000</td>
+                </tr>
+                <tr>
+                  <td>200 Purchases off</td>
+                  <td>$50000</td>
+                </tr>
+                <tr>
+                  <td>300 Purchases off</td>
+                  <td>$50000</td>
+                </tr>
+                <tr>
+                  <td>Additional Price</td>
+                  <td>$50000</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="modal-content__btns">
+            <a class="btn--muted" href="#!">Set Based Rates</a>
+            <button class="btn modal-close">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modals__new-user-support modals__new-user" data-target="modal-new-user-support">
+      <button class="modal-close" style="display: none;">Закрыть</button>
+      <div class="modal-content">
+        <h3 class="modal-content__title">new user</h3>
+        <div class="modal-content__items">
+          <div class="modal-content__item">
+            <h4 class="modal-content__item-title">user id:</h4>
+            <div class="copy-box">
+              <button class="btn__copy" onclick="copy('copy-new-user-support')">
+                <svg class="icon-copy">
+                  <use xlink:href="#icon-copy"></use>
+                </svg>
+              </button>
+              <input class="input" type="text" id="copy-new-user-support" value="m4#Ori_349_[]uw5">
+              <div class="input-buffer"></div>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

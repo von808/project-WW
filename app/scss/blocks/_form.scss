@@ -1,0 +1,311 @@
+.form {
+
+  font-family: 'Nunito Sans', sans-serif;
+  color: #000;
+  line-height: normal;
+  letter-spacing: 0px;
+
+  &__input-boxes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__input-box {
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 4px;
+    border: 1px solid #E7EBEE;
+    background: #FFF;
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    padding: 23px 25px 8px;
+
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__label {
+    position: absolute;
+    top: 15.5px;
+    left: 25px;
+
+    pointer-events: none;
+    transition: all .1s linear;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    white-space: nowrap;
+
+    color: #B0B0B0;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__input:focus+.form__label,
+  &__input:focus-visible+.form__label,
+  &__input:not(:placeholder-shown)+.form__label {
+    top: 8px;
+    font-size: 10px;
+  }
+
+  &__input-box--search {
+    height: 35px;
+
+    padding: 0;
+    border-radius: 4px;
+    overflow: hidden;
+
+    .form__input {
+      padding: 5px 30px;
+      border-right: 1px solid #E7EBEE;
+    }
+
+    .form__input::placeholder {
+      color: #000;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  &__copy-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.data-picker {
+  &__label {
+    width: 100%;
+    height: 25px;
+    padding: 0 7.5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    z-index: 3;
+
+    background-image: url(../images/icons/calendar.svg);
+    background-repeat: no-repeat;
+    background-size: 13px 11px;
+    background-position: calc(100% - 7.5px) center;
+
+    border-radius: 3px;
+    border: 1px solid #E7EBEE;
+    background-color: #FFF;
+  }
+
+  &__input {
+    cursor: pointer;
+    background-color: transparent;
+
+    color: #000;
+    font-size: 10px;
+    font-weight: 400;
+  }
+}
+
+.add-file {
+  &__box {
+    width: 130px;
+    height: 35px;
+    flex-shrink: 0;
+    position: relative;
+
+    border-radius: 4px;
+    border: 1px dashed #D9D9D9;
+
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    padding: 5px 20px;
+    cursor: pointer;
+
+    &::-webkit-file-upload-button {
+      visibility: hidden;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 21px;
+    pointer-events: none;
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50px;
+    pointer-events: none;
+  }
+}
+
+//============================================================DROPDOWN
+.form-group {
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+
+  .cstm-dropdown-placeholder {
+    position: absolute;
+    top: 15.5px;
+    left: 25px;
+    transition: all .1s linear;
+    pointer-events: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+
+    color: #B0B0B0;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &.cstm-dropdown-active {
+    .cstm-dropdown-placeholder {
+      top: 8px;
+      font-size: 10px;
+
+      .icon-chevron {
+        display: none;
+      }
+    }
+  }
+}
+
+.dropdown__button {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+
+  border-radius: 4px;
+  border: 1px solid #E7EBEE;
+  background: #FFF;
+
+  padding: 8px 25px;
+
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  span {
+    pointer-events: none;
+  }
+}
+
+.dropdown__button:focus,
+.dropdown__button--active {
+  outline: none;
+
+  &+.cstm-dropdown-placeholder {
+    top: 8px;
+    font-size: 10px;
+
+    .icon-chevron {
+      display: none;
+    }
+  }
+}
+
+.dropdown__list {
+  display: none;
+  max-height: 175px;
+
+  position: absolute;
+  left: 0;
+  top: 52px;
+
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border: 1px solid #E7EBEE;
+
+  background: #FFFFFF;
+  overflow: auto;
+
+  border-radius: 4px;
+  width: 100%;
+
+  z-index: 3;
+}
+
+.dropdown__list--visible {
+  display: block;
+}
+
+.dropdown__list-item {
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  padding: 8px 25px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #E7EBEE;
+  }
+}
+
+.dropdown__list-item:hover {
+  background: rgba(176, 198, 225, 0.26);
+}
+
+.dropdown__list-item-content {
+  pointer-events: none;
+}
+
+.dropdown__input-hidden {
+  display: none;
+}
