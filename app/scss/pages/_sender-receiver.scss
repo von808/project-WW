@@ -24,22 +24,24 @@
 
   .form__input-box--cstm {
     &:nth-child(1) {
-      width: calc(60% - 10px);
+      width: calc(100% - 180px - 20px);
     }
 
     &:nth-child(2) {
-      width: calc(40% - 10px);
+      width: 180px;
     }
   }
 
   .sender-receiver__form .form__input-box--cstm:nth-child(2) {
     .form__input {
-      padding-right: 55px;
+      padding-right: 45px;
     }
 
     .btn--reset {
       position: absolute;
-      right: 32px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 22px;
     }
 
     .icon-reset {}

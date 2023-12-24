@@ -16,7 +16,7 @@ body {
 
   display: grid;
   grid-template-columns: 285px calc(100vw - 285px - 15px);
-  grid-template-columns: 285px calc(100vw - 285px);
+  grid-template-columns: 285px calc(100% - 285px);
 
   &:has(.reg-and-log) {
     display: block;
@@ -47,6 +47,9 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
+  
+  margin: 0 auto 0 0;
+  padding: 0 15px 0 60px;
 
   &:has(.purchases__items-box) {
     padding-left: 60px;

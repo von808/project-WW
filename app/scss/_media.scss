@@ -1,7 +1,5 @@
 @media (min-width: 1700px) {
-  .wrapper {
-    display: block;
-  }
+
 
   .page-api .main {
     width: 100%;
@@ -24,6 +22,10 @@
     width: 100%;
   }
 
+  .container {
+    padding: 0 15px;
+  }
+
   .container:has(.purchases__items-box) {
     padding-left: 15px;
   }
@@ -34,7 +36,6 @@
 
   .page-support-user .purchases__items-wrapper {
     padding: 0;
-    padding-left: 15px;
   }
 
   .sidebar {
@@ -84,6 +85,10 @@
 }
 
 @media (max-width:768px) {
+  .page-support-user .purchases__items-wrapper {
+    padding-left: 15px;
+  }
+
   .api__copy {
     flex-direction: column;
     align-items: flex-start;
