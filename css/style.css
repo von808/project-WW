@@ -137,7 +137,7 @@ body {
   position: relative;
   display: grid;
   grid-template-columns: 285px calc(100vw - 285px - 15px);
-  grid-template-columns: 285px calc(100vw - 285px);
+  grid-template-columns: 285px calc(100% - 285px);
 }
 .wrapper:has(.reg-and-log) {
   display: block;
@@ -165,6 +165,8 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
+  margin: 0 auto 0 0;
+  padding: 0 15px 0 60px;
 }
 .container:has(.purchases__items-box) {
   padding-left: 60px;
@@ -1579,6 +1581,7 @@ hr {
   overflow-x: auto;
   max-width: 100%;
   width: calc(100vw - 285px - 30px);
+  width: calc(100vw - 285px - 60px - 15px);
 }
 .api__table {
   width: 100%;
@@ -1712,17 +1715,19 @@ hr {
   gap: 20px;
 }
 .sender-receiver .form__input-box--cstm:nth-child(1) {
-  width: calc(60% - 10px);
+  width: calc(100% - 180px - 20px);
 }
 .sender-receiver .form__input-box--cstm:nth-child(2) {
-  width: calc(40% - 10px);
+  width: 180px;
 }
 .sender-receiver .sender-receiver__form .form__input-box--cstm:nth-child(2) .form__input {
-  padding-right: 55px;
+  padding-right: 45px;
 }
 .sender-receiver .sender-receiver__form .form__input-box--cstm:nth-child(2) .btn--reset {
   position: absolute;
-  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 22px;
 }
 .sender-receiver .dropdown__button {
   padding: 23px 25px 8px;
@@ -3415,6 +3420,9 @@ hr {
   padding-left: 24px;
   margin-left: -24px;
 }
+.page-support-user .purchases__items-box::-webkit-scrollbar {
+  display: none;
+}
 .page-support-user .purchases__item {
   width: fit-content;
   grid-template-columns: 160px 1px 130px 1px 160px 1px 80px 1px 160px 1px 100px;
@@ -3426,9 +3434,6 @@ hr {
 }
 
 @media (min-width: 1700px) {
-  .wrapper {
-    display: block;
-  }
   .page-api .main {
     width: 100%;
   }
@@ -3446,6 +3451,9 @@ hr {
   .page-api .main {
     width: 100%;
   }
+  .container {
+    padding: 0 15px;
+  }
   .container:has(.purchases__items-box) {
     padding-left: 15px;
   }
@@ -3454,7 +3462,6 @@ hr {
   }
   .page-support-user .purchases__items-wrapper {
     padding: 0;
-    padding-left: 15px;
   }
   .sidebar {
     position: fixed;
@@ -3493,6 +3500,9 @@ hr {
   }
 }
 @media (max-width: 768px) {
+  .page-support-user .purchases__items-wrapper {
+    padding-left: 15px;
+  }
   .api__copy {
     flex-direction: column;
     align-items: flex-start;
