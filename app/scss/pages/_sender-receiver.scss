@@ -54,6 +54,7 @@
 
 .custom-line-item {
   margin-bottom: 80px;
+  display: none;
 
   &__inner {}
 
@@ -68,12 +69,6 @@
     grid-template-columns: auto 145px 220px 10px;
     align-items: center;
     gap: 20px;
-  }
-
-  &__item:first-child .custom-line-item__item-btn {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
   }
 
   &__item-add {
@@ -117,6 +112,51 @@
     color: #000;
     font-size: 14px;
     font-weight: 400;
+  }
+
+  .custom-line-item__item-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .custom-line-item__item-btn {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    &.active-line {
+      display: flex !important;
+    }
+
+    &.active-line.del-btn {
+      .custom-line-item__item-add {
+        display: inline-block !important;
+      }
+    }
+
+    &.del-btn .custom-line-item__item-btn {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+
+    .custom-line-item__item-add {
+      display: none;
+    }
+
+    &:first-child {
+      .custom-line-item__item-btn {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+    }
+
+    &:not(:first-child) {
+      display: none;
+    }
   }
 }
 
@@ -251,7 +291,7 @@
     }
   }
 
-  &__prices-item--cheaper {
+  &__prices-item.cheaper {
     &::before {
       content: '';
       position: absolute;
@@ -266,11 +306,7 @@
     }
   }
 
-  &__prices-item--muted .details__prices-box span {
-    color: #B0B0B0;
-  }
-
-  &__prices-item--best-choice {
+  &__prices-item.best-choice {
     &::before {
       content: '';
       position: absolute;
@@ -381,6 +417,10 @@
 
   .dropdown__list-item {
     height: 35px;
+
+    span {
+      pointer-events: none;
+    }
   }
 
   .rating__value {
@@ -402,6 +442,7 @@
   }
 
 }
+
 .input-number {
   &__arrow {
     position: absolute;

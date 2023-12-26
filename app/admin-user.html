@@ -309,16 +309,6 @@
           d="M8 1.5C4.41594 1.5 1.5 4.41594 1.5 8C1.5 11.5841 4.41594 14.5 8 14.5C11.5841 14.5 14.5 11.5841 14.5 8C14.5 4.41594 11.5841 1.5 8 1.5ZM10.5 8.5H8.5V10.5C8.5 10.6326 8.44732 10.7598 8.35355 10.8536C8.25979 10.9473 8.13261 11 8 11C7.86739 11 7.74021 10.9473 7.64645 10.8536C7.55268 10.7598 7.5 10.6326 7.5 10.5V8.5H5.5C5.36739 8.5 5.24021 8.44732 5.14645 8.35355C5.05268 8.25979 5 8.13261 5 8C5 7.86739 5.05268 7.74021 5.14645 7.64645C5.24021 7.55268 5.36739 7.5 5.5 7.5H7.5V5.5C7.5 5.36739 7.55268 5.24021 7.64645 5.14645C7.74021 5.05268 7.86739 5 8 5C8.13261 5 8.25979 5.05268 8.35355 5.14645C8.44732 5.24021 8.5 5.36739 8.5 5.5V7.5H10.5C10.6326 7.5 10.7598 7.55268 10.8536 7.64645C10.9473 7.74021 11 7.86739 11 8C11 8.13261 10.9473 8.25979 10.8536 8.35355C10.7598 8.44732 10.6326 8.5 10.5 8.5Z" />
       </g>
     </symbol>
-    <symbol id="asd">
-      <g>
-  
-      </g>
-    </symbol>
-    <symbol id="asd">
-      <g>
-  
-      </g>
-    </symbol>
   </svg>
   <div class="wrapper page-admin-user">
     <div class="sidebar sidebar-admin">
@@ -471,8 +461,15 @@
                       </tr>
                       <tr>
                         <td>JRBT4NCJ</td>
-                        <td>$25000</td>
-                        <td>0</td>
+                        <td>
+                          <div class="input-price--box">
+                            <input class="input-price" type="number" placeholder="0" value="25000">
+                            <span class="input-price--symbol">$</span>
+                          </div>
+                        </td>
+                        <td>
+                          <input class="input-number" type="number" placeholder="0" value="0">
+                        </td>
                         <td>$10000 on $5000</td>
                         <td>
                           <button class="table__btn--popup modal-open" data-path="modal-price-show">
@@ -483,22 +480,62 @@
                           </button>
                         </td>
                         <td>
-                          <button class="table__btn--popup">
-                            <svg class="icon-plus">
-                              <use xlink:href="#plus"></use>
-                            </svg>
-                            <span>Yes</span>
-                          </button>
+                          <div class="form-group insurance">
+                            <div class="dropdown">
+                              <svg class="icon-plus">
+                                <use xlink:href="#plus"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content">Yes</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="yes">
+                                  <span class="dropdown__list-item-content">Yes</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="no">
+                                  <span class="dropdown__list-item-content">No</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="yes" class="dropdown__input-hidden">
+                            </div>
+                          </div>
                         </td>
-                        <td class="text--green">Active</td>
+                        <td>
+                          <div class="form-group status">
+                            <div class="dropdown">
+                              <svg class="icon-chevron">
+                                <use xlink:href="#chevron"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content text--green">Active</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="active">
+                                  <span class="dropdown__list-item-content text--green">Active</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="inactive">
+                                  <span class="dropdown__list-item-content text--muted">Inactive</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="active" class="dropdown__input-hidden">
+                            </div>
+                          </div>
+                        </td>
                         <td>
                           <button class="btn--action">SAVE</button>
                         </td>
                       </tr>
                       <tr>
                         <td>HS9TWSH</td>
-                        <td>$470</td>
-                        <td>1</td>
+                        <td>
+                          <div class="input-price--box">
+                            <input class="input-price" type="number" placeholder="0" value="470">
+                            <span class="input-price--symbol">$</span>
+                          </div>
+                        </td>
+                        <td>
+                          <input class="input-number" type="number" placeholder="0" value="1">
+                        </td>
                         <td>$150 on $256</td>
                         <td>
                           <button class="table__btn--popup modal-open" data-path="modal-price-show">
@@ -509,22 +546,62 @@
                           </button>
                         </td>
                         <td>
-                          <button class="table__btn--popup">
-                            <svg class="icon-plus">
-                              <use xlink:href="#plus"></use>
-                            </svg>
-                            <span>Yes</span>
-                          </button>
+                          <div class="form-group insurance">
+                            <div class="dropdown">
+                              <svg class="icon-plus">
+                                <use xlink:href="#plus"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content">Yes</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="yes">
+                                  <span class="dropdown__list-item-content">Yes</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="no">
+                                  <span class="dropdown__list-item-content">No</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="yes" class="dropdown__input-hidden">
+                            </div>
+                          </div>
                         </td>
-                        <td class="text--green">Active</td>
+                        <td>
+                          <div class="form-group status">
+                            <div class="dropdown">
+                              <svg class="icon-chevron">
+                                <use xlink:href="#chevron"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content text--green">Active</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="active">
+                                  <span class="dropdown__list-item-content text--green">Active</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="inactive">
+                                  <span class="dropdown__list-item-content text--muted">Inactive</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="active" class="dropdown__input-hidden">
+                            </div>
+                          </div>
+                        </td>
                         <td>
                           <button class="btn--action">SAVE</button>
                         </td>
                       </tr>
                       <tr>
                         <td>E5OLF30Y</td>
-                        <td>$12000</td>
-                        <td>0</td>
+                        <td>
+                          <div class="input-price--box">
+                            <input class="input-price" type="number" placeholder="0" value="12000">
+                            <span class="input-price--symbol">$</span>
+                          </div>
+                        </td>
+                        <td>
+                          <input class="input-number" type="number" placeholder="0" value="0">
+                        </td>
                         <td>$2980 on $7800</td>
                         <td>
                           <button class="table__btn--popup modal-open" data-path="modal-price-show">
@@ -535,22 +612,62 @@
                           </button>
                         </td>
                         <td>
-                          <button class="table__btn--popup">
-                            <svg class="icon-plus">
-                              <use xlink:href="#plus"></use>
-                            </svg>
-                            <span>Yes</span>
-                          </button>
+                          <div class="form-group insurance">
+                            <div class="dropdown">
+                              <svg class="icon-plus">
+                                <use xlink:href="#plus"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content">Yes</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="yes">
+                                  <span class="dropdown__list-item-content">Yes</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="no">
+                                  <span class="dropdown__list-item-content">No</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="yes" class="dropdown__input-hidden">
+                            </div>
+                          </div>
                         </td>
-                        <td class="text--green">Active</td>
+                        <td>
+                          <div class="form-group status">
+                            <div class="dropdown">
+                              <svg class="icon-chevron">
+                                <use xlink:href="#chevron"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content text--green">Active</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="active">
+                                  <span class="dropdown__list-item-content text--green">Active</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="inactive">
+                                  <span class="dropdown__list-item-content text--muted">Inactive</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="active" class="dropdown__input-hidden">
+                            </div>
+                          </div>
+                        </td>
                         <td>
                           <button class="btn--action">SAVE</button>
                         </td>
                       </tr>
                       <tr>
                         <td>GQXV5TES</td>
-                        <td>$1550</td>
-                        <td>1</td>
+                        <td>
+                          <div class="input-price--box">
+                            <input class="input-price" type="number" placeholder="0" value="1550">
+                            <span class="input-price--symbol">$</span>
+                          </div>
+                        </td>
+                        <td>
+                          <input class="input-number" type="number" placeholder="0" value="1">
+                        </td>
                         <td>$350 on $810</td>
                         <td>
                           <button class="table__btn--popup modal-open" data-path="modal-price-show">
@@ -561,14 +678,47 @@
                           </button>
                         </td>
                         <td>
-                          <button class="table__btn--popup">
-                            <svg class="icon-plus">
-                              <use xlink:href="#plus"></use>
-                            </svg>
-                            <span>Yes</span>
-                          </button>
+                          <div class="form-group insurance">
+                            <div class="dropdown">
+                              <svg class="icon-plus">
+                                <use xlink:href="#plus"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content">Yes</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="yes">
+                                  <span class="dropdown__list-item-content">Yes</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="no">
+                                  <span class="dropdown__list-item-content">No</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="yes" class="dropdown__input-hidden">
+                            </div>
+                          </div>
                         </td>
-                        <td class="text--green">Active</td>
+                        <td>
+                          <div class="form-group status">
+                            <div class="dropdown">
+                              <svg class="icon-chevron">
+                                <use xlink:href="#chevron"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content text--green">Active</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="active">
+                                  <span class="dropdown__list-item-content text--green">Active</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="inactive">
+                                  <span class="dropdown__list-item-content text--muted">Inactive</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="active" class="dropdown__input-hidden">
+                            </div>
+                          </div>
+                        </td>
                         <td>
                           <button class="btn--action">SAVE</button>
                         </td>
@@ -591,8 +741,15 @@
                       </tr>
                       <tr>
                         <td>JRBT4NCJ</td>
-                        <td>$0</td>
-                        <td>0</td>
+                        <td>
+                          <div class="input-price--box">
+                            <input class="input-price" type="number" placeholder="0" value="0">
+                            <span class="input-price--symbol">$</span>
+                          </div>
+                        </td>
+                        <td>
+                          <input class="input-number" type="number" placeholder="0" value="0">
+                        </td>
                         <td>$0 on $0</td>
                         <td>
                           <button class="table__btn--popup modal-open" data-path="modal-price-show">
@@ -603,22 +760,63 @@
                           </button>
                         </td>
                         <td>
-                          <button class="table__btn--popup">
-                            <svg class="icon-plus">
-                              <use xlink:href="#plus"></use>
-                            </svg>
-                            <span>No</span>
-                          </button>
+                          <div class="form-group insurance">
+                            <div class="dropdown">
+                              <svg class="icon-plus">
+                                <use xlink:href="#plus"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content">No</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="yes">
+                                  <span class="dropdown__list-item-content">Yes</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="no">
+                                  <span class="dropdown__list-item-content">No</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="no" class="dropdown__input-hidden">
+                            </div>
+                          </div>
                         </td>
-                        <td class="text--muted">Inactive</td>
+                        <td>
+                          <div class="form-group status">
+                            <div class="dropdown">
+                              <svg class="icon-chevron">
+                                <use xlink:href="#chevron"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content text--muted">Inactive</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="active">
+                                  <span class="dropdown__list-item-content text--green">Active</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="inactive">
+                                  <span class="dropdown__list-item-content text--muted">Inactive</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="inactive" class="dropdown__input-hidden">
+                            </div>
+                          </div>
+                        </td>
                         <td>
                           <button class="btn--action">SAVE</button>
                         </td>
                       </tr>
                       <tr>
                         <td>HS9TWSH</td>
-                        <td>$0</td>
-                        <td>1</td>
+                        <td>
+                          <div class="input-price--box">
+                            <input class="input-price" type="number" placeholder="0" value="0">
+                            <span class="input-price--symbol">$</span>
+                          </div>
+                        </td>
+                        </td>
+                        <td>
+                          <input class="input-number" type="number" placeholder="0" value="1">
+                        </td>
                         <td>$0 on $0</td>
                         <td>
                           <button class="table__btn--popup modal-open" data-path="modal-price-show">
@@ -629,22 +827,63 @@
                           </button>
                         </td>
                         <td>
-                          <button class="table__btn--popup">
-                            <svg class="icon-plus">
-                              <use xlink:href="#plus"></use>
-                            </svg>
-                            <span>No</span>
-                          </button>
+                          <div class="form-group insurance">
+                            <div class="dropdown">
+                              <svg class="icon-plus">
+                                <use xlink:href="#plus"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content">No</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="yes">
+                                  <span class="dropdown__list-item-content">Yes</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="no">
+                                  <span class="dropdown__list-item-content">No</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="no" class="dropdown__input-hidden">
+                            </div>
+                          </div>
                         </td>
-                        <td class="text--muted">Inactive</td>
+                        <td>
+                          <div class="form-group status">
+                            <div class="dropdown">
+                              <svg class="icon-chevron">
+                                <use xlink:href="#chevron"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content text--muted">Inactive</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="active">
+                                  <span class="dropdown__list-item-content text--green">Active</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="inactive">
+                                  <span class="dropdown__list-item-content text--muted">Inactive</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="inactive" class="dropdown__input-hidden">
+                            </div>
+                          </div>
+                        </td>
                         <td>
                           <button class="btn--action">SAVE</button>
                         </td>
                       </tr>
                       <tr>
                         <td>E5OLF30Y</td>
-                        <td>$0</td>
-                        <td>0</td>
+                        <td>
+                          <div class="input-price--box">
+                            <input class="input-price" type="number" placeholder="0" value="0">
+                            <span class="input-price--symbol">$</span>
+                          </div>
+                        </td>
+                        </td>
+                        <td>
+                          <input class="input-number" type="number" placeholder="0" value="0">
+                        </td>
                         <td>$0 on $0</td>
                         <td>
                           <button class="table__btn--popup modal-open" data-path="modal-price-show">
@@ -655,22 +894,63 @@
                           </button>
                         </td>
                         <td>
-                          <button class="table__btn--popup">
-                            <svg class="icon-plus">
-                              <use xlink:href="#plus"></use>
-                            </svg>
-                            <span>No</span>
-                          </button>
+                          <div class="form-group insurance">
+                            <div class="dropdown">
+                              <svg class="icon-plus">
+                                <use xlink:href="#plus"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content">No</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="yes">
+                                  <span class="dropdown__list-item-content">Yes</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="no">
+                                  <span class="dropdown__list-item-content">No</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="no" class="dropdown__input-hidden">
+                            </div>
+                          </div>
                         </td>
-                        <td class="text--muted">Inactive</td>
                         <td>
-                          <button class="btn--action">SAVE</button>
-                        </td>
+                          <div class="form-group status">
+                            <div class="dropdown">
+                              <svg class="icon-chevron">
+                                <use xlink:href="#chevron"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content text--muted">Inactive</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="active">
+                                  <span class="dropdown__list-item-content text--green">Active</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="inactive">
+                                  <span class="dropdown__list-item-content text--muted">Inactive</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="inactive" class="dropdown__input-hidden">
+                            </div>
+                          </div>
+                          </td>
+                          <td>
+                            <button class="btn--action">SAVE</button>
+                          </td>
                       </tr>
                       <tr>
                         <td>GQXV5TES</td>
-                        <td>$0</td>
-                        <td>1</td>
+                        <td>
+                          <div class="input-price--box">
+                            <input class="input-price" type="number" placeholder="0" value="0">
+                            <span class="input-price--symbol">$</span>
+                          </div>
+                        </td>
+                        </td>
+                        <td>
+                          <input class="input-number" type="number" placeholder="0" value="1">
+                        </td>
                         <td>$0 on $0</td>
                         <td>
                           <button class="table__btn--popup modal-open" data-path="modal-price-show">
@@ -681,14 +961,47 @@
                           </button>
                         </td>
                         <td>
-                          <button class="table__btn--popup">
-                            <svg class="icon-plus">
-                              <use xlink:href="#plus"></use>
-                            </svg>
-                            <span>No</span>
-                          </button>
+                          <div class="form-group insurance">
+                            <div class="dropdown">
+                              <svg class="icon-plus">
+                                <use xlink:href="#plus"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content">No</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="yes">
+                                  <span class="dropdown__list-item-content">Yes</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="no">
+                                  <span class="dropdown__list-item-content">No</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="no" class="dropdown__input-hidden">
+                            </div>
+                          </div>
                         </td>
-                        <td class="text--muted">Inactive</td>
+                        <td>
+                          <div class="form-group status">
+                            <div class="dropdown">
+                              <svg class="icon-chevron">
+                                <use xlink:href="#chevron"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content text--muted">Inactive</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="active">
+                                  <span class="dropdown__list-item-content text--green">Active</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="inactive">
+                                  <span class="dropdown__list-item-content text--muted">Inactive</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="inactive" class="dropdown__input-hidden">
+                            </div>
+                          </div>
+                        </td>
                         <td>
                           <button class="btn--action">SAVE</button>
                         </td>
@@ -742,7 +1055,7 @@
               </div>
               <div class="modal-content__middle-item">
                 Tracker Number:
-                <span>
+                <div>
                   <div class="copy-box">
                     <button class="btn__copy" onclick="copy('copy-sender-receiver-1')">
                       <svg class="icon-copy">
@@ -752,7 +1065,7 @@
                     <input class="input" id="copy-sender-receiver-1" type="text" value="00000000000000">
                     <div class="input-buffer"></div>
                   </div>
-                </span>
+                </div>
               </div>
             </div>
             <hr>
@@ -800,7 +1113,7 @@
               </div>
               <div class="modal-content__middle-item">
                 Tracker Number:
-                <span>
+                <div>
                   <div class="copy-box">
                     <button class="btn__copy" onclick="copy('copy-sender-receiver-2')">
                       <svg class="icon-copy">
@@ -810,7 +1123,7 @@
                     <input class="input"  id="copy-sender-receiver-2" type="text" value="RT324Bb938op49">
                     <div class="input-buffer"></div>
                   </div>
-                </span>
+                </div>
               </div>
             </div>
             <hr>
@@ -914,33 +1227,75 @@
                   </tr>
                   <tr>
                     <td>UPS Ground</td>
-                    <td>0</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="0">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>UPS 3 day</td>
-                    <td>1</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="1">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>UPS 2 day</td>
-                    <td>0</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="0">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>UPS 1 day</td>
-                    <td>1</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="1">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>UPS International</td>
-                    <td>1</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="1">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>White UPS Ground</td>
-                    <td>1</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="1">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                 </table>
               </div>
@@ -955,28 +1310,63 @@
                   </tr>
                   <tr>
                     <td>FedEx Ground</td>
-                    <td>0</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="0">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>FedEx 3 day</td>
-                    <td>1</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="1">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>FedEx 2 day</td>
-                    <td>0</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="0">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>FedEx 1 day</td>
-                    <td>1</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="1">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>FedEx International</td>
-                    <td>1</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="1">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                 </table>
               </div>
@@ -991,13 +1381,27 @@
                   </tr>
                   <tr>
                     <td>Priority</td>
-                    <td>0</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="0">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>Express</td>
-                    <td>1</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="1">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                 </table>
               </div>
@@ -1011,23 +1415,48 @@
                   </tr>
                   <tr>
                     <td>Start Discount</td>
-                    <td>$50000</td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="50000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>50 Purchases off</td>
-                    <td>$50000</td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="50000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>200 Purchases off</td>
-                    <td>$50000</td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="50000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>300 Purchases off</td>
-                    <td>$50000</td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="50000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>Additional Price</td>
-                    <td>$50000</td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="50000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                 </table>
               </div>

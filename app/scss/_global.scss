@@ -47,7 +47,7 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-  
+
   margin: 0 auto 0 0;
   padding: 0 15px 0 60px;
 
@@ -348,7 +348,9 @@ a {
 }
 
 .text {
-  &-color {
+
+  &-color,
+  &--red {
     color: #FD6A4A;
   }
 
@@ -357,17 +359,22 @@ a {
   }
 
   &--muted {
-    color: #B0B0B0;
+    color: #B0B0B0 !important;
   }
 
-  &--violet {
+  &--violet,
+  &--blue {
     color: #4D4AFD;
+  }
+
+  &--black {
+    color: #000;
   }
 }
 
 .input-hidden {
   position: absolute;
-  width: 1px px;
+  width: 1px;
   height: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -506,6 +513,9 @@ hr {
   // max-width: 100%;
   // width: calc(100vw - 285px - 30px);
   width: calc(100% + 2px);
+
+  padding-bottom: 100px;
+  margin-bottom: -100px;
 
   table {
     border-collapse: collapse;

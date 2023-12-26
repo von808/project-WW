@@ -28,23 +28,28 @@
                 <div class="balance__elem-box">
                   <span>Your Amount</span>
                   <div class="balance__elem-input--box">
-                    <input class="balance__elem-input" type="text" readonly value="$14054.50">
-                    <div class="input-buffer"></div>
+                    <div class="input-price--box">
+                      <input class="input-price" type="number" placeholder="0" value="14054.50"">
+                    </div>
                   </div>
                 </div>
                 <div class="balance__elem-box">
                   <span>Last Trasaction</span>
                   <div class="balance__elem-input--box">
-                    <input class="balance__elem-input" type="text" readonly value="$7.51">
+                    <div class="input-price--box">
+                      <input class="input-price" type="number" placeholder="0" value="7.51"">
+                    </div>
                   </div>
                 </div>
                 <div class="balance__elem-box">
                   <span>Payouts & Taxes</span>
                   <div class="balance__elem-input--box">
-                    <svg class="icon-use">
-                      <use xlink:href="#use"></use>
-                    </svg>
-                    Withdraw
+                    <button class="balance__elem-input--btn">
+                      <svg class="icon-use">
+                        <use xlink:href="#use"></use>
+                      </svg>
+                      Withdraw
+                    </button>
                   </div>
                 </div>
               </div>
@@ -52,25 +57,67 @@
                 <div class="balance__elem-box balance__elem-box--choise">
                   <span>Please Choose Amount for auto-replenishment</span>
                   <div class="balance__elem-input--box">
-                    <input class="balance__elem-input" type="text" readonly value="$1512.55">
+                    <div class="form-group">
+                      <div class="dropdown">
+                        <svg class="icon-chevron">
+                          <use xlink:href="#chevron"></use>
+                        </svg>
+                        <button class="dropdown__button" type="button">
+                          <span class="dropdown__list-item-content">1512.55</span>
+                        </button>
+                        <ul class="dropdown__list">
+                          <li class="dropdown__list-item" data-value="50">
+                            <span class="dropdown__list-item-content">50</span>
+                          </li>
+                          <li class="dropdown__list-item" data-value="100">
+                            <span class="dropdown__list-item-content">100</span>
+                          </li>
+                          <li class="dropdown__list-item" data-value="200">
+                            <span class="dropdown__list-item-content">200</span>
+                          </li>
+                          <li class="dropdown__list-item" data-value="300">
+                            <span class="dropdown__list-item-content">300</span>
+                          </li>
+                          <li class="dropdown__list-item" data-value="400">
+                            <span class="dropdown__list-item-content">400</span>
+                          </li>
+                          <li class="dropdown__list-item" data-value="500">
+                            <span class="dropdown__list-item-content">500</span>
+                          </li>
+                          <li class="dropdown__list-item" data-value="1000">
+                            <span class="dropdown__list-item-content">1000</span>
+                          </li>
+                          <li class="dropdown__list-item" data-value="3000">
+                            <span class="dropdown__list-item-content">3000</span>
+                          </li>
+                          <li class="dropdown__list-item" data-value="5000">
+                            <span class="dropdown__list-item-content">5000</span>
+                          </li>
+                          <li class="dropdown__list-item" data-value="10000">
+                            <span class="dropdown__list-item-content">10000</span>
+                          </li>
+                        </ul>
+                        <input type="text" name="select-category" value="1512.55" class="dropdown__input-hidden">
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="balance__elem-box balance__elem-box--payment">
                   <span>Payment Method</span>
                   <div class="balance__elem-input--box-btns">
-                    <button class="balance__elem-btn" id="wallet-payment-1">
+                    <button class="balance__elem-btn wallet-payment" id="wallet-payment-1">
                       <img src="images/icons/pay-crypto.png" alt="pay">
                       Crypto
                     </button>
-                    <button class="balance__elem-btn" id="wallet-payment-2">
+                    <button class="balance__elem-btn wallet-payment" id="wallet-payment-2">
                       <img src="images/icons/pay-venmo.png" alt="pay">
                       Venmo
                     </button>
-                    <button class="balance__elem-btn" id="wallet-payment-3">
+                    <button class="balance__elem-btn wallet-payment" id="wallet-payment-3">
                       <img src="images/icons/pay-paypal.png" alt="pay">
                       PayPal
                     </button>
-                    <button class="balance__elem-btn" id="wallet-payment-4">
+                    <button class="balance__elem-btn wallet-payment" id="wallet-payment-4">
                       <img src="images/icons/pay-cash.png" alt="pay">
                       CashApp
                     </button>
@@ -276,6 +323,7 @@
   <!--=include modal.html-->
   <script src="libs/jquery/jquery.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.umd.min.js"></script>
+  <script src="js/payment.js"></script>
   <script src="js/main.js"></script>
 </body>
 

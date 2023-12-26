@@ -28,23 +28,28 @@
                 <div class="balance__elem-box">
                   <span>Your Amount</span>
                   <div class="balance__elem-input--box">
-                    <input class="balance__elem-input" type="text" readonly value="$14054.50">
-                    <div class="input-buffer"></div>
+                    <div class="input-price--box">
+                      <input class="input-price" type="number" placeholder="0" value="14054.50"">
+                    </div>
                   </div>
                 </div>
-                <div class="balance__elem-box">
+                <div class=" balance__elem-box">
                   <span>Last Trasaction</span>
                   <div class="balance__elem-input--box">
-                    <input class="balance__elem-input" type="text" readonly value="$7.51">
-                  </div>
-                </div>
-                <div class="balance__elem-box">
-                  <span>Payouts & Taxes</span>
+                    <div class="input-price--box">
+                      <input class="input-price" type="number" placeholder="0" value="7.51"">
+                    </div>
+                 </div>
+               </div>
+               <div class=" balance__elem-box">
+                 <span>Payouts & Taxes</span>
                   <div class="balance__elem-input--box">
-                    <svg class="icon-use">
-                      <use xlink:href="#use"></use>
-                    </svg>
-                    Withdraw
+                    <button class="balance__elem-input--btn">
+                      <svg class="icon-use">
+                        <use xlink:href="#use"></use>
+                      </svg>
+                      Withdraw
+                    </button>
                   </div>
                 </div>
               </div>
@@ -58,19 +63,19 @@
                 <div class="balance__elem-box balance__elem-box--payment">
                   <span>Payment Method</span>
                   <div class="balance__elem-input--box-btns">
-                    <button class="balance__elem-btn">
+                    <button class="balance__elem-btn wallet-payment" id="wallet-payment-1">
                       <img src="images/icons/pay-crypto.png" alt="pay">
                       Crypto
                     </button>
-                    <button class="balance__elem-btn">
+                    <button class="balance__elem-btn wallet-payment" id="wallet-payment-2">
                       <img src="images/icons/pay-venmo.png" alt="pay">
                       Venmo
                     </button>
-                    <button class="balance__elem-btn">
+                    <button class="balance__elem-btn wallet-payment" id="wallet-payment-3">
                       <img src="images/icons/pay-paypal.png" alt="pay">
                       PayPal
                     </button>
-                    <button class="balance__elem-btn">
+                    <button class="balance__elem-btn wallet-payment" id="wallet-payment-4">
                       <img src="images/icons/pay-cash.png" alt="pay">
                       CashApp
                     </button>

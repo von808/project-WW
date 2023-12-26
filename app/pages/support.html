@@ -35,27 +35,19 @@
                     <div class="tickets__head">
                       <div class="tickets__head-item">
                         <span>Support Answered</span>
-                        <div class="tickets__head-circle">
-                          05
-                        </div>
+                        <div class="tickets__head-circle" id="tickets-answered"></div>
                       </div>
                       <div class="tickets__head-item">
                         <span>Not Answered</span>
-                        <div class="tickets__head-circle">
-                          02
-                        </div>
+                        <div class="tickets__head-circle" id="tickets-not-answered"></div>
                       </div>
                       <div class="tickets__head-item">
                         <span>Not Resolved Tickets</span>
-                        <div class="tickets__head-circle">
-                          08
-                        </div>
+                        <div class="tickets__head-circle" id="tickets-not-resolved"></div>
                       </div>
                       <div class="tickets__head-item">
                         <span>Resolved Tickets</span>
-                        <div class="tickets__head-circle">
-                          17
-                        </div>
+                        <div class="tickets__head-circle" id="tickets-resolved"></div>
                       </div>
                     </div>
                     <div class="tickets__content">
@@ -73,7 +65,7 @@
                             <span>Ticket #48120 by OR3948HN387NH48</span>
                             |
                             <div class="form-group">
-                              <div class="dropdown">                                
+                              <div class="dropdown">
                                 <svg class="icon-chevron">
                                   <use xlink:href="#chevron"></use>
                                 </svg>
@@ -94,7 +86,8 @@
                                     <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
                                   </li>
                                 </ul>
-                                <input type="text" name="select-category" value="Not Answered" class="dropdown__input-hidden">
+                                <input type="text" name="select-category" value="Not Answered"
+                                  class="dropdown__input-hidden">
                               </div>
                             </div>
                           </a>
@@ -123,7 +116,8 @@
                                     <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
                                   </li>
                                 </ul>
-                                <input type="text" name="select-category" value="answered" class="dropdown__input-hidden">
+                                <input type="text" name="select-category" value="answered"
+                                  class="dropdown__input-hidden">
                               </div>
                             </div>
                           </a>
@@ -152,7 +146,8 @@
                                     <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
                                   </li>
                                 </ul>
-                                <input type="text" name="select-category" value="resolved" class="dropdown__input-hidden">
+                                <input type="text" name="select-category" value="resolved"
+                                  class="dropdown__input-hidden">
                               </div>
                             </div>
                           </a>
@@ -181,7 +176,8 @@
                                     <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
                                   </li>
                                 </ul>
-                                <input type="text" name="select-category" value="Not Answered" class="dropdown__input-hidden">
+                                <input type="text" name="select-category" value="Not Answered"
+                                  class="dropdown__input-hidden">
                               </div>
                             </div>
                           </a>
@@ -210,7 +206,8 @@
                                     <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
                                   </li>
                                 </ul>
-                                <input type="text" name="select-category" value="Not Answered" class="dropdown__input-hidden">
+                                <input type="text" name="select-category" value="Not Answered"
+                                  class="dropdown__input-hidden">
                               </div>
                             </div>
                           </a>
@@ -239,7 +236,8 @@
                                     <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
                                   </li>
                                 </ul>
-                                <input type="text" name="select-category" value="resolved" class="dropdown__input-hidden">
+                                <input type="text" name="select-category" value="resolved"
+                                  class="dropdown__input-hidden">
                               </div>
                             </div>
                           </a>
@@ -268,7 +266,8 @@
                                     <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
                                   </li>
                                 </ul>
-                                <input type="text" name="select-category" value="resolved" class="dropdown__input-hidden">
+                                <input type="text" name="select-category" value="resolved"
+                                  class="dropdown__input-hidden">
                               </div>
                             </div>
                           </a>
@@ -297,7 +296,8 @@
                                     <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
                                   </li>
                                 </ul>
-                                <input type="text" name="select-category" value="resolved" class="dropdown__input-hidden">
+                                <input type="text" name="select-category" value="resolved"
+                                  class="dropdown__input-hidden">
                               </div>
                             </div>
                           </a>
@@ -415,9 +415,11 @@
                   <div class="admin-support__compensations-col-1">
                     <div class="balance__elem-box">
                       <span>Amount</span>
-                      <div class="balance__elem-input--box">
-                        <input class="balance__elem-input" type="text" readonly value="$250,50">
-                      </div>
+                      <button class="compensations__amount-btn">
+                        <div class="balance__elem-input--box">
+                          <input class="balance__elem-input" type="text" readonly value="$250,50">
+                        </div>
+                      </button>
                     </div>
                     <div class="balance__elem-box">
                       <span>User ID</span>
@@ -589,8 +591,24 @@
                           <h3 class="tickets__form-title">Answer To User</h3>
                           <div class="tickets__form-inputs">
                             <div class="tickets__form-input--box">
-                              <span class="tickets__form-input--placeholder">Type:</span>
-                              <input class="tickets__form-input" type="text" value="Regarding The Label">
+                              <div class="form-group">
+                                <div class="dropdown">
+                                  <span class="tickets__form-input-title">Type:</span>
+                                  <button class="dropdown__button" type="button">
+                                    <span class="dropdown__list-item-content">Regarding The Label</span>
+                                  </button>
+                                  <ul class="dropdown__list">
+                                    <li class="dropdown__list-item" data-value="regarding-the-label">
+                                      <span class="dropdown__list-item-content">Regarding The Label</span>
+                                    </li>
+                                    <li class="dropdown__list-item" data-value="general-questions">
+                                      <span class="dropdown__list-item-content">General Questions</span>
+                                    </li>
+                                  </ul>
+                                  <input type="text" name="select-category" value="regarding-the-label"
+                                    class="dropdown__input-hidden">
+                                </div>
+                              </div>
                             </div>
                             <div class="tickets__form-input--box">
                               <span class="tickets__form-input--placeholder">Track:</span>

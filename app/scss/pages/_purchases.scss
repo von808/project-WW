@@ -183,16 +183,10 @@
     grid-row: 3/4;
   }
 
-  &.page-purchases-selected {
-
-    .purchases__item.purchases__items-head {
-      color: #fff;
-      background-color: #4D4AFD;
-    }
-
-    .purchases-bars__table-head-btn {
-      cursor: pointer;
-    }
+  #progress-score-1-full,
+  #progress-score-2-full,
+  #progress-score-3-full {
+    display: none;
   }
 
   &__bars.purchases__bars--circle {
@@ -302,5 +296,29 @@
   &__bars-line {
     height: 100%;
     border-radius: 4px;
+  }
+
+
+}
+
+.purchases__items-head--selected {
+  color: #fff;
+  background-color: #4D4AFD;
+  display: none;
+  
+  .purchases-bars__table-head-btn {
+    cursor: pointer;
+  }
+}
+
+.purchases__items-wrapper:has(.checkbox-angle .checkbox-input:checked) {
+  .purchases__items-head--default {
+    display: none;
+  }
+  
+  .purchases__items-head--selected {
+    color: #fff;
+    display: grid;
+    background-color: #4D4AFD;
   }
 }

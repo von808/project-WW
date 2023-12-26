@@ -3,6 +3,10 @@
   align-items: center;
   min-height: calc(100vh - 80px);
 
+  .container {
+    margin: 0 auto;
+  }
+
   &__inner {
     max-width: 300px;
     width: 100%;

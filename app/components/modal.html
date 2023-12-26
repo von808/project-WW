@@ -37,7 +37,7 @@
             </div>
             <div class="modal-content__middle-item">
               Tracker Number:
-              <span>
+              <div>
                 <div class="copy-box">
                   <button class="btn__copy" onclick="copy('copy-sender-receiver-1')">
                     <svg class="icon-copy">
@@ -47,7 +47,7 @@
                   <input class="input" id="copy-sender-receiver-1" type="text" value="00000000000000">
                   <div class="input-buffer"></div>
                 </div>
-              </span>
+              </div>
             </div>
           </div>
           <hr>
@@ -95,7 +95,7 @@
             </div>
             <div class="modal-content__middle-item">
               Tracker Number:
-              <span>
+              <div>
                 <div class="copy-box">
                   <button class="btn__copy" onclick="copy('copy-sender-receiver-2')">
                     <svg class="icon-copy">
@@ -105,7 +105,7 @@
                   <input class="input"  id="copy-sender-receiver-2" type="text" value="RT324Bb938op49">
                   <div class="input-buffer"></div>
                 </div>
-              </span>
+              </div>
             </div>
           </div>
           <hr>
@@ -209,33 +209,75 @@
                 </tr>
                 <tr>
                   <td>UPS Ground</td>
-                  <td>0</td>
-                  <td>$5000</td>
+                  <td>
+                    <input class="input-number" type="number" placeholder="0" value="0">
+                  </td>
+                  <td>
+                    <div class="input-price--box">
+                      <input class="input-price" type="number" placeholder="0" value="5000">
+                      <span class="input-price--symbol">$</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>UPS 3 day</td>
-                  <td>1</td>
-                  <td>$5000</td>
+                  <td>
+                    <input class="input-number" type="number" placeholder="0" value="1">
+                  </td>
+                  <td>
+                    <div class="input-price--box">
+                      <input class="input-price" type="number" placeholder="0" value="5000">
+                      <span class="input-price--symbol">$</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>UPS 2 day</td>
-                  <td>0</td>
-                  <td>$5000</td>
+                  <td>
+                    <input class="input-number" type="number" placeholder="0" value="0">
+                  </td>
+                  <td>
+                    <div class="input-price--box">
+                      <input class="input-price" type="number" placeholder="0" value="5000">
+                      <span class="input-price--symbol">$</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>UPS 1 day</td>
-                  <td>1</td>
-                  <td>$5000</td>
+                  <td>
+                    <input class="input-number" type="number" placeholder="0" value="1">
+                  </td>
+                  <td>
+                    <div class="input-price--box">
+                      <input class="input-price" type="number" placeholder="0" value="5000">
+                      <span class="input-price--symbol">$</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>UPS International</td>
-                  <td>1</td>
-                  <td>$5000</td>
+                  <td>
+                    <input class="input-number" type="number" placeholder="0" value="1">
+                  </td>
+                  <td>
+                    <div class="input-price--box">
+                      <input class="input-price" type="number" placeholder="0" value="5000">
+                      <span class="input-price--symbol">$</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>White UPS Ground</td>
-                  <td>1</td>
-                  <td>$5000</td>
+                  <td>
+                    <input class="input-number" type="number" placeholder="0" value="1">
+                  </td>
+                  <td>
+                    <div class="input-price--box">
+                      <input class="input-price" type="number" placeholder="0" value="5000">
+                      <span class="input-price--symbol">$</span>
+                    </div>
+                  </td>
                 </tr>
               </table>
             </div>
@@ -250,28 +292,63 @@
                 </tr>
                 <tr>
                   <td>FedEx Ground</td>
-                  <td>0</td>
-                  <td>$5000</td>
+                  <td>
+                    <input class="input-number" type="number" placeholder="0" value="0">
+                  </td>
+                  <td>
+                    <div class="input-price--box">
+                      <input class="input-price" type="number" placeholder="0" value="5000">
+                      <span class="input-price--symbol">$</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>FedEx 3 day</td>
-                  <td>1</td>
-                  <td>$5000</td>
+                  <td>
+                    <input class="input-number" type="number" placeholder="0" value="1">
+                  </td>
+                  <td>
+                    <div class="input-price--box">
+                      <input class="input-price" type="number" placeholder="0" value="5000">
+                      <span class="input-price--symbol">$</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>FedEx 2 day</td>
-                  <td>0</td>
-                  <td>$5000</td>
+                  <td>
+                    <input class="input-number" type="number" placeholder="0" value="0">
+                  </td>
+                  <td>
+                    <div class="input-price--box">
+                      <input class="input-price" type="number" placeholder="0" value="5000">
+                      <span class="input-price--symbol">$</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>FedEx 1 day</td>
-                  <td>1</td>
-                  <td>$5000</td>
+                  <td>
+                    <input class="input-number" type="number" placeholder="0" value="1">
+                  </td>
+                  <td>
+                    <div class="input-price--box">
+                      <input class="input-price" type="number" placeholder="0" value="5000">
+                      <span class="input-price--symbol">$</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>FedEx International</td>
-                  <td>1</td>
-                  <td>$5000</td>
+                  <td>
+                    <input class="input-number" type="number" placeholder="0" value="1">
+                  </td>
+                  <td>
+                    <div class="input-price--box">
+                      <input class="input-price" type="number" placeholder="0" value="5000">
+                      <span class="input-price--symbol">$</span>
+                    </div>
+                  </td>
                 </tr>
               </table>
             </div>
@@ -286,13 +363,27 @@
                 </tr>
                 <tr>
                   <td>Priority</td>
-                  <td>0</td>
-                  <td>$5000</td>
+                  <td>
+                    <input class="input-number" type="number" placeholder="0" value="0">
+                  </td>
+                  <td>
+                    <div class="input-price--box">
+                      <input class="input-price" type="number" placeholder="0" value="5000">
+                      <span class="input-price--symbol">$</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>Express</td>
-                  <td>1</td>
-                  <td>$5000</td>
+                  <td>
+                    <input class="input-number" type="number" placeholder="0" value="1">
+                  </td>
+                  <td>
+                    <div class="input-price--box">
+                      <input class="input-price" type="number" placeholder="0" value="5000">
+                      <span class="input-price--symbol">$</span>
+                    </div>
+                  </td>
                 </tr>
               </table>
             </div>
@@ -306,23 +397,48 @@
                 </tr>
                 <tr>
                   <td>Start Discount</td>
-                  <td>$50000</td>
+                  <td>
+                    <div class="input-price--box">
+                      <input class="input-price" type="number" placeholder="0" value="50000">
+                      <span class="input-price--symbol">$</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>50 Purchases off</td>
-                  <td>$50000</td>
+                  <td>
+                    <div class="input-price--box">
+                      <input class="input-price" type="number" placeholder="0" value="50000">
+                      <span class="input-price--symbol">$</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>200 Purchases off</td>
-                  <td>$50000</td>
+                  <td>
+                    <div class="input-price--box">
+                      <input class="input-price" type="number" placeholder="0" value="50000">
+                      <span class="input-price--symbol">$</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>300 Purchases off</td>
-                  <td>$50000</td>
+                  <td>
+                    <div class="input-price--box">
+                      <input class="input-price" type="number" placeholder="0" value="50000">
+                      <span class="input-price--symbol">$</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>Additional Price</td>
-                  <td>$50000</td>
+                  <td>
+                    <div class="input-price--box">
+                      <input class="input-price" type="number" placeholder="0" value="50000">
+                      <span class="input-price--symbol">$</span>
+                    </div>
+                  </td>
                 </tr>
               </table>
             </div>

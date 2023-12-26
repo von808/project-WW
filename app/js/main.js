@@ -1,5 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  (function () {
+    var caseItem = document.querySelectorAll('.wallet-payment'),
+      active = document.getElementsByClassName('payment-active');
+
+    Array.from(caseItem).forEach(function (item, i, caseItem) {
+      item.addEventListener('click', function (e) {
+        if (active.length > 0 && active[0] !== this)
+          active[0].classList.remove('payment-active');
+
+        this.classList.toggle('payment-active');
+      });
+    });
+  })();
+
   //============================================================SIDEBAR-START
   const sidebarBtn = document.querySelector('.sidebar__btn-open');
   const sidebar = document.querySelector('.sidebar');
@@ -121,7 +135,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function setRatingActiveWidth(index = ratingValue.innerHTML) {
       const ratingActiveWidth = index;
-      ratingActive.style.width = `${ratingActiveWidth}%`;
+      // ratingActive.style.width = `${ratingActiveWidth}%`;
+
+      if (ratingActiveWidth <= 0) {
+        ratingActive.style.width = '0%';
+      } else if (ratingActiveWidth >= 1 && ratingActiveWidth < 10) {
+        ratingActive.style.width = '10%';
+      } else if (ratingActiveWidth >= 10 && ratingActiveWidth < 20) {
+        ratingActive.style.width = '10%';
+      } else if (ratingActiveWidth >= 20 && ratingActiveWidth < 30) {
+        ratingActive.style.width = '20%';
+      } else if (ratingActiveWidth >= 30 && ratingActiveWidth < 40) {
+        ratingActive.style.width = '30%';
+      } else if (ratingActiveWidth >= 40 && ratingActiveWidth < 50) {
+        ratingActive.style.width = '40%';
+      } else if (ratingActiveWidth >= 50 && ratingActiveWidth < 60) {
+        ratingActive.style.width = '50%';
+      } else if (ratingActiveWidth >= 60 && ratingActiveWidth < 70) {
+        ratingActive.style.width = '60%';
+      } else if (ratingActiveWidth >= 70 && ratingActiveWidth < 80) {
+        ratingActive.style.width = '70%';
+      } else if (ratingActiveWidth >= 80 && ratingActiveWidth < 90) {
+        ratingActive.style.width = '80%';
+      } else if (ratingActiveWidth >= 90 && ratingActiveWidth < 100) {
+        ratingActive.style.width = '90%';
+      } else if (ratingActiveWidth >= 100) {
+        ratingActive.style.width = '100%';
+      }
     }
 
     function setRating(rating) {
@@ -193,6 +233,63 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   //============================================================MODAL-END
 
+  //============================================================TICKETS-HISTORY-START
+  let scoreA = document.querySelector('#tickets-answered');
+  let scoreNA = document.querySelector('#tickets-not-answered');
+  let scoreR = document.querySelector('#tickets-resolved');
+  let scoreNR = document.querySelector('#tickets-not-resolved');
+
+  const ticketsScoreTrigger = document.querySelectorAll('.dropdown__list-item');
+
+  ticketsScoreTrigger.forEach((el, index) => {
+    el.addEventListener('click', (e) => {
+      ticketsScoreUpdate();
+    });
+  });
+
+  ticketsScoreUpdate()
+
+  function ticketsScoreUpdate() {
+    let ticketA = document.querySelectorAll('.dropdown__button > .dropdown__list-item-content.answered');
+    let ticketNA = document.querySelectorAll('.dropdown__button > .dropdown__list-item-content.not-answered');
+    let ticketR = document.querySelectorAll('.dropdown__button > .dropdown__list-item-content.resolved');
+    let ticketNR = document.querySelectorAll('.dropdown__button > .dropdown__list-item-content.not-resolved');
+
+    let scoreABox = ticketA.length
+    let scoreNABox = ticketNA.length
+    let scoreRBox = ticketR.length
+    let scoreNRBox = ticketNR.length
+
+    if (scoreABox < 10) {
+      scoreABox = '0' + scoreABox;
+    } else {
+      scoreABox = scoreABox
+    }
+    scoreA.innerHTML = scoreABox;
+
+    if (scoreNABox < 10) {
+      scoreNABox = '0' + scoreNABox;
+    } else {
+      scoreNABox = scoreNABox
+    }
+    scoreNA.innerHTML = scoreNABox;
+
+    if (scoreRBox < 10) {
+      scoreRBox = '0' + scoreRBox;
+    } else {
+      scoreRBox = scoreRBox
+    }
+    scoreR.innerHTML = scoreRBox;
+
+    if (scoreNRBox < 10) {
+      scoreNRBox = '0' + scoreNRBox;
+    } else {
+      scoreNRBox = scoreNRBox
+    }
+    scoreNR.innerHTML = scoreNRBox;
+  }
+  //============================================================TICKETS-HISTORY-END
+
   //============================================================TAB-START
   const tabBtn = document.querySelectorAll('.tab-btn')
   const tabItem = document.querySelectorAll('.tab-item')
@@ -240,56 +337,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   //============================================================INPUT-NUMBER-END
 
-  //============================================================WALLET-PAYMENT-START
-
-  const wPayment1 = document.querySelector('#wallet-payment-1')
-  const wPayment2 = document.querySelector('#wallet-payment-2')
-  const wPayment3 = document.querySelector('#wallet-payment-3')
-  const wPayment4 = document.querySelector('#wallet-payment-4')
-
-  const wCheckbox1 = document.querySelector('#wallet-checkbox-1')
-  const wCheckbox2 = document.querySelector('#wallet-checkbox-2')
-  const wCheckbox3 = document.querySelector('#wallet-checkbox-3')
-  const wCheckbox4 = document.querySelector('#wallet-checkbox-4')
-
-  wCheckbox1.addEventListener('change', () => {
-    if (wCheckbox1.checked) {
-      wPayment1.style.display = "flex";
-    } else {
-      wPayment1.style.display = "none";
-    }
-  })
-
-  wCheckbox2.addEventListener('change', () => {
-    if (wCheckbox2.checked) {
-      wPayment2.style.display = "flex";
-    } else {
-      wPayment2.style.display = "none";
-    }
-  })
-
-  wCheckbox3.addEventListener('change', () => {
-    if (wCheckbox3.checked) {
-      wPayment3.style.display = "flex";
-    } else {
-      wPayment3.style.display = "none";
-    }
-  })
-
-  wCheckbox4.addEventListener('change', () => {
-    if (wCheckbox4.checked) {
-      wPayment4.style.display = "flex";
-    } else {
-      wPayment4.style.display = "none";
-    }
-  })
-
-  //============================================================WALLET-PAYMENT-END
-
   //============================================================INPUT-WIDTH-START
   $(function () {
 
-    var $input = $('.input'),
+    let $input = $('.input'),
       $buffer = $('.input-buffer');
 
     // $input.on('input', function () {

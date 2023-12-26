@@ -1,0 +1,37 @@
+input[type=number],
+input[type=number]::placeholder {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+.input-price--box {
+  position: relative;
+
+  .input-price--symbol {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    display: none;
+    pointer-events: none;
+  }
+
+  &:has(.input-price:not(:placeholder-shown)) {
+    .input-price {
+      position: relative;
+      left: 7px;
+    }
+
+    .input-price--symbol {
+      display: inline-block;
+    }
+  }
+}
+
+.balance__elem-input--box{
+  .input-price{
+    text-align: center;
+    left: 0 !important;
+  }
+}

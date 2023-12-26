@@ -22,6 +22,13 @@
       .balance__elem-box span {
         padding: 0;
       }
+
+      &:has(.payment-active) .balance__elem-box--btn .btn {
+        color: #fff;
+        border: none;
+        background-color: #4D4AFD;
+        pointer-events: all;
+      }
     }
   }
 
@@ -29,6 +36,13 @@
 
   &__elem-box--btn {
     flex: 1;
+
+    .btn {
+      color: #B0B0B0;
+      border: 1px solid #E7EBEE;
+      background-color: #FFF;
+      pointer-events: none;
+    }
   }
 
   &__elem-box {
@@ -93,6 +107,11 @@
     border-radius: 4px;
     border: 1px solid #E7EBEE;
     background: #FFF;
+
+    &.payment-active {
+      background-color: #4D4AFD;
+      color: #FFF;
+    }
 
     img {
       display: block;

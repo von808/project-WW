@@ -1,0 +1,207 @@
+//============================================================DROPDOWN
+.form-group {
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+
+  .cstm-dropdown-placeholder {
+    position: absolute;
+    top: 15.5px;
+    left: 25px;
+    transition: all .1s linear;
+    pointer-events: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+
+    color: #B0B0B0;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &.cstm-dropdown-active {
+    .cstm-dropdown-placeholder {
+      top: 8px;
+      font-size: 10px;
+
+      .icon-chevron {
+        display: none;
+      }
+    }
+  }
+}
+
+.dropdown__button {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+
+  border-radius: 4px;
+  border: 1px solid #E7EBEE;
+  background: #FFF;
+
+  padding: 8px 25px;
+
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  span {
+    pointer-events: none;
+  }
+}
+
+.dropdown__button:focus,
+.dropdown__button--active {
+  outline: none;
+
+  &+.cstm-dropdown-placeholder {
+    top: 8px;
+    font-size: 10px;
+
+    .icon-chevron {
+      display: none;
+    }
+  }
+}
+
+.dropdown__list {
+  display: none;
+  max-height: 175px;
+
+  position: absolute;
+  left: 0;
+  top: 52px;
+
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border: 1px solid #E7EBEE;
+
+  background: #FFFFFF;
+  overflow: auto;
+
+  border-radius: 4px;
+  width: 100%;
+
+  z-index: 3;
+}
+
+.dropdown__list--visible {
+  display: block;
+}
+
+.dropdown__list-item {
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  padding: 8px 25px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #E7EBEE;
+  }
+}
+
+.dropdown__list-item:hover {
+  background: rgba(176, 198, 225, 0.26);
+}
+
+.dropdown__list-item-content {
+  pointer-events: none;
+}
+
+.dropdown__input-hidden {
+  display: none;
+}
+
+//============================================================DROPDOWN-STATUS
+.form-group.status {
+  .dropdown__button {
+    width: 100%;
+    height: calc(32px - 16px) !important;
+    border: none;
+    padding: 0 !important;
+
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  .icon-chevron {
+    position: absolute;
+    right: -5px;
+    z-index: 1;
+    stroke: #242424;
+    pointer-events: none;
+  }
+
+  .dropdown__list {
+    top: calc(100% + 0px);
+    width: calc(100% + 24px);
+    left: -12px;
+
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown__list-item {
+    height: 25px;
+    padding: 8px 12px;
+    font-size: inherit;
+    font-weight: inherit;
+  }
+}
+
+//============================================================DROPDOWN-INSURANCE
+.form-group.insurance {
+  .dropdown__button {
+    border: none;
+    padding-left: 38px;
+    height: 32px;
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  .dropdown__list {
+    top: calc(100% - 8px);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown__list-item {
+    font-size: inherit;
+    font-weight: inherit;
+    height: 32px;
+  }
+
+  .icon-plus {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+    z-index: 1;
+  }
+}
