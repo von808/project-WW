@@ -1624,10 +1624,10 @@ input[type=number]::placeholder {
 .page-admin-support .nav__item-support .nav__link svg {
   fill: #4D4AFD;
 }
-.page-support-user .nav__item-support .nav__link {
+.page-support-user .nav__item-overview .nav__link {
   color: #4D4AFD;
 }
-.page-support-user .nav__item-support .nav__link svg {
+.page-support-user .nav__item-overview .nav__link svg {
   fill: #4D4AFD;
 }
 .page-admin-wallet .nav__item-wallet .nav__link {
