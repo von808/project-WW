@@ -309,16 +309,6 @@
           d="M8 1.5C4.41594 1.5 1.5 4.41594 1.5 8C1.5 11.5841 4.41594 14.5 8 14.5C11.5841 14.5 14.5 11.5841 14.5 8C14.5 4.41594 11.5841 1.5 8 1.5ZM10.5 8.5H8.5V10.5C8.5 10.6326 8.44732 10.7598 8.35355 10.8536C8.25979 10.9473 8.13261 11 8 11C7.86739 11 7.74021 10.9473 7.64645 10.8536C7.55268 10.7598 7.5 10.6326 7.5 10.5V8.5H5.5C5.36739 8.5 5.24021 8.44732 5.14645 8.35355C5.05268 8.25979 5 8.13261 5 8C5 7.86739 5.05268 7.74021 5.14645 7.64645C5.24021 7.55268 5.36739 7.5 5.5 7.5H7.5V5.5C7.5 5.36739 7.55268 5.24021 7.64645 5.14645C7.74021 5.05268 7.86739 5 8 5C8.13261 5 8.25979 5.05268 8.35355 5.14645C8.44732 5.24021 8.5 5.36739 8.5 5.5V7.5H10.5C10.6326 7.5 10.7598 7.55268 10.8536 7.64645C10.9473 7.74021 11 7.86739 11 8C11 8.13261 10.9473 8.25979 10.8536 8.35355C10.7598 8.44732 10.6326 8.5 10.5 8.5Z" />
       </g>
     </symbol>
-    <symbol id="asd">
-      <g>
-  
-      </g>
-    </symbol>
-    <symbol id="asd">
-      <g>
-  
-      </g>
-    </symbol>
   </svg>
   <div class="wrapper page-admin-support">
     <div class="sidebar sidebar-admin">
@@ -415,27 +405,19 @@
                   <div class="tickets__head">
                     <div class="tickets__head-item">
                       <span>Support Answered</span>
-                      <div class="tickets__head-circle">
-                        05
-                      </div>
+                      <div class="tickets__head-circle" id="tickets-answered"></div>
                     </div>
                     <div class="tickets__head-item">
                       <span>Not Answered</span>
-                      <div class="tickets__head-circle">
-                        02
-                      </div>
+                      <div class="tickets__head-circle" id="tickets-not-answered"></div>
                     </div>
                     <div class="tickets__head-item">
                       <span>Not Resolved Tickets</span>
-                      <div class="tickets__head-circle">
-                        08
-                      </div>
+                      <div class="tickets__head-circle" id="tickets-not-resolved"></div>
                     </div>
                     <div class="tickets__head-item">
                       <span>Resolved Tickets</span>
-                      <div class="tickets__head-circle">
-                        17
-                      </div>
+                      <div class="tickets__head-circle" id="tickets-resolved"></div>
                     </div>
                   </div>
                   <div class="tickets__content">
@@ -452,42 +434,237 @@
                         <a class="tickets__history-list-item tickets__history-list-item--not-answered" href="#!">
                           <span>Ticket #48120 by OR3948HN387NH48</span>
                           |
-                          <span>Not Answered</span>
+                          <div class="form-group">
+                            <div class="dropdown">
+                              <svg class="icon-chevron">
+                                <use xlink:href="#chevron"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content not-answered">Not Answered</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="not-answered">
+                                  <span class="dropdown__list-item-content not-answered">Not Answered</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="answered">
+                                  <span class="dropdown__list-item-content answered">Answered</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="resolved">
+                                  <span class="dropdown__list-item-content resolved">Resolved</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="not-resolved">
+                                  <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="Not Answered"
+                                class="dropdown__input-hidden">
+                            </div>
+                          </div>
                         </a>
                         <a class="tickets__history-list-item tickets__history-list-item--answered" href="#!">
                           <span>Ticket #44901 by UE344KO345NN345</span>
                           |
-                          <span>Answered</span>
+                          <div class="form-group">
+                            <div class="dropdown">
+                              <svg class="icon-chevron">
+                                <use xlink:href="#chevron"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content answered">Answered</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="not-answered">
+                                  <span class="dropdown__list-item-content not-answered">Not Answered</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="answered">
+                                  <span class="dropdown__list-item-content answered">Answered</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="resolved">
+                                  <span class="dropdown__list-item-content resolved">Resolved</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="not-resolved">
+                                  <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="answered" class="dropdown__input-hidden">
+                            </div>
+                          </div>
                         </a>
                         <a class="tickets__history-list-item tickets__history-list-item--resolved" href="#!">
                           <span>Ticket #43375 by MZ567OI349MB190</span>
                           |
-                          <span>Resolved</span>
+                          <div class="form-group">
+                            <div class="dropdown">
+                              <svg class="icon-chevron">
+                                <use xlink:href="#chevron"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content resolved">Resolved</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="not-answered">
+                                  <span class="dropdown__list-item-content not-answered">Not Answered</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="answered">
+                                  <span class="dropdown__list-item-content answered">Answered</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="resolved">
+                                  <span class="dropdown__list-item-content resolved">Resolved</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="not-resolved">
+                                  <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="resolved" class="dropdown__input-hidden">
+                            </div>
+                          </div>
                         </a>
                         <a class="tickets__history-list-item tickets__history-list-item--not-answered" href="#!">
                           <span>Ticket #41281 by OR3948HN387NH48</span>
                           |
-                          <span>Not Answered</span>
+                          <div class="form-group">
+                            <div class="dropdown">
+                              <svg class="icon-chevron">
+                                <use xlink:href="#chevron"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content not-answered">Not Answered</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="not-answered">
+                                  <span class="dropdown__list-item-content not-answered">Not Answered</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="answered">
+                                  <span class="dropdown__list-item-content answered">Answered</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="resolved">
+                                  <span class="dropdown__list-item-content resolved">Resolved</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="not-resolved">
+                                  <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="Not Answered"
+                                class="dropdown__input-hidden">
+                            </div>
+                          </div>
                         </a>
                         <a class="tickets__history-list-item tickets__history-list-item--not-resolved" href="#!">
                           <span>Ticket #40269 by KN190LP333PY344</span>
                           |
-                          <span>Not Resolved</span>
+                          <div class="form-group">
+                            <div class="dropdown">
+                              <svg class="icon-chevron">
+                                <use xlink:href="#chevron"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="not-answered">
+                                  <span class="dropdown__list-item-content not-answered">Not Answered</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="answered">
+                                  <span class="dropdown__list-item-content answered">Answered</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="resolved">
+                                  <span class="dropdown__list-item-content resolved">Resolved</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="not-resolved">
+                                  <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="Not Answered"
+                                class="dropdown__input-hidden">
+                            </div>
+                          </div>
                         </a>
                         <a class="tickets__history-list-item tickets__history-list-item--resolved" href="#!">
                           <span>Ticket #39845 by XC348QW939BN509</span>
                           |
-                          <span>Resolved</span>
+                          <div class="form-group">
+                            <div class="dropdown">
+                              <svg class="icon-chevron">
+                                <use xlink:href="#chevron"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content resolved">Resolved</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="not-answered">
+                                  <span class="dropdown__list-item-content not-answered">Not Answered</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="answered">
+                                  <span class="dropdown__list-item-content answered">Answered</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="resolved">
+                                  <span class="dropdown__list-item-content resolved">Resolved</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="not-resolved">
+                                  <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="resolved" class="dropdown__input-hidden">
+                            </div>
+                          </div>
                         </a>
                         <a class="tickets__history-list-item tickets__history-list-item--resolved" href="#!">
                           <span>Ticket #35699 by NU490MR345OR100</span>
                           |
-                          <span>Resolved</span>
+                          <div class="form-group">
+                            <div class="dropdown">
+                              <svg class="icon-chevron">
+                                <use xlink:href="#chevron"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content resolved">Resolved</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="not-answered">
+                                  <span class="dropdown__list-item-content not-answered">Not Answered</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="answered">
+                                  <span class="dropdown__list-item-content answered">Answered</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="resolved">
+                                  <span class="dropdown__list-item-content resolved">Resolved</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="not-resolved">
+                                  <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="resolved" class="dropdown__input-hidden">
+                            </div>
+                          </div>
                         </a>
                         <a class="tickets__history-list-item tickets__history-list-item--resolved" href="#!">
                           <span>Ticket #29005 by TP934FF789XV494</span>
                           |
-                          <span>Resolved</span>
+                          <div class="form-group">
+                            <div class="dropdown">
+                              <svg class="icon-chevron">
+                                <use xlink:href="#chevron"></use>
+                              </svg>
+                              <button class="dropdown__button" type="button">
+                                <span class="dropdown__list-item-content resolved">Resolved</span>
+                              </button>
+                              <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="not-answered">
+                                  <span class="dropdown__list-item-content not-answered">Not Answered</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="answered">
+                                  <span class="dropdown__list-item-content answered">Answered</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="resolved">
+                                  <span class="dropdown__list-item-content resolved">Resolved</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="not-resolved">
+                                  <span class="dropdown__list-item-content not-resolved">Not Resolved</span>
+                                </li>
+                              </ul>
+                              <input type="text" name="select-category" value="resolved" class="dropdown__input-hidden">
+                            </div>
+                          </div>
                         </a>
                         <a class="tickets__history-list-item--more" href="#!">View Your Application History</a>
                       </div>
@@ -501,9 +678,11 @@
                   <div class="admin-support__compensations-col-1">
                     <div class="balance__elem-box">
                       <span>Amount</span>
-                      <div class="balance__elem-input--box">
-                        <input class="balance__elem-input" type="text" readonly value="$250,50">
-                      </div>
+                      <button class="compensations__amount-btn">
+                        <div class="balance__elem-input--box">
+                          <input class="balance__elem-input" type="text" readonly value="$250,50">
+                        </div>
+                      </button>
                     </div>
                     <div class="balance__elem-box">
                       <span>User ID</span>
@@ -752,7 +931,7 @@
               </div>
               <div class="modal-content__middle-item">
                 Tracker Number:
-                <span>
+                <div>
                   <div class="copy-box">
                     <button class="btn__copy" onclick="copy('copy-sender-receiver-1')">
                       <svg class="icon-copy">
@@ -762,7 +941,7 @@
                     <input class="input" id="copy-sender-receiver-1" type="text" value="00000000000000">
                     <div class="input-buffer"></div>
                   </div>
-                </span>
+                </div>
               </div>
             </div>
             <hr>
@@ -810,7 +989,7 @@
               </div>
               <div class="modal-content__middle-item">
                 Tracker Number:
-                <span>
+                <div>
                   <div class="copy-box">
                     <button class="btn__copy" onclick="copy('copy-sender-receiver-2')">
                       <svg class="icon-copy">
@@ -820,7 +999,7 @@
                     <input class="input"  id="copy-sender-receiver-2" type="text" value="RT324Bb938op49">
                     <div class="input-buffer"></div>
                   </div>
-                </span>
+                </div>
               </div>
             </div>
             <hr>
@@ -924,33 +1103,75 @@
                   </tr>
                   <tr>
                     <td>UPS Ground</td>
-                    <td>0</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="0">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>UPS 3 day</td>
-                    <td>1</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="1">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>UPS 2 day</td>
-                    <td>0</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="0">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>UPS 1 day</td>
-                    <td>1</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="1">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>UPS International</td>
-                    <td>1</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="1">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>White UPS Ground</td>
-                    <td>1</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="1">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                 </table>
               </div>
@@ -965,28 +1186,63 @@
                   </tr>
                   <tr>
                     <td>FedEx Ground</td>
-                    <td>0</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="0">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>FedEx 3 day</td>
-                    <td>1</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="1">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>FedEx 2 day</td>
-                    <td>0</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="0">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>FedEx 1 day</td>
-                    <td>1</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="1">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>FedEx International</td>
-                    <td>1</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="1">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                 </table>
               </div>
@@ -1001,13 +1257,27 @@
                   </tr>
                   <tr>
                     <td>Priority</td>
-                    <td>0</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="0">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>Express</td>
-                    <td>1</td>
-                    <td>$5000</td>
+                    <td>
+                      <input class="input-number" type="number" placeholder="0" value="1">
+                    </td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="5000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                 </table>
               </div>
@@ -1021,23 +1291,48 @@
                   </tr>
                   <tr>
                     <td>Start Discount</td>
-                    <td>$50000</td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="50000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>50 Purchases off</td>
-                    <td>$50000</td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="50000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>200 Purchases off</td>
-                    <td>$50000</td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="50000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>300 Purchases off</td>
-                    <td>$50000</td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="50000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                     <td>Additional Price</td>
-                    <td>$50000</td>
+                    <td>
+                      <div class="input-price--box">
+                        <input class="input-price" type="number" placeholder="0" value="50000">
+                        <span class="input-price--symbol">$</span>
+                      </div>
+                    </td>
                   </tr>
                 </table>
               </div>
@@ -1073,6 +1368,7 @@
   </div>
   <script src="libs/jquery/jquery.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.umd.min.js"></script>
+  <script src="js/tickets-history.js"></script>
   <script src="js/main.js"></script>
 </body>
 
