@@ -72,6 +72,15 @@
     flex-direction: column;
     gap: 15px;
     margin-bottom: 25px;
+
+    &.tickets__history-list--more {
+      margin: 0;
+      display: none;
+
+      &.tickets-more {
+        display: flex;
+      }
+    }
   }
 
   &__history-list-item {
@@ -636,5 +645,76 @@
   .dropdown__list-item {
     height: 35px;
     padding: 5px 13px;
+  }
+}
+
+.tickets__form-input--box.choice-user,
+.choice-user {
+  .icon-chevron {
+    stroke: #242424;
+    pointer-events: none;
+  }
+
+  .dropdown__button {
+    padding-left: 105px;
+    gap: 8px;
+  }
+
+  .dropdown__list {
+    top: calc(100% + 10px);
+    height: 272px;
+    max-height: unset;
+  }
+
+  .dropdown__list-item--searchid {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 25px;
+
+    span {
+      color: #000;
+      font-family: inherit;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .icon-search {
+      stroke: #242424;
+    }
+
+    form {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+    }
+
+    button {
+      width: 24px;
+      height: 24px;
+    }
+
+
+    input {
+      width: 100%;
+      height: 24px;
+    }
+  }
+
+  .dropdown__list-item {
+    height: fit-content;
+    padding: 7.5px 25px;
+    border: none;
+
+    &:hover {
+      background-color: unset;
+    }
   }
 }

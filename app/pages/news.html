@@ -26,59 +26,88 @@
             <div class="news__items">
               <div class="news__item">
                 <picture>
-                  <source type="image/avif" srcset="images/news/news-1.avif">
-                  <source type="image/webp" srcset="images/news/news-1.webp">
-                  <img class="news__img" src="images/news/news-1.jpg" alt="news">
+                  <source type="image/avif" srcset="images/news/news-3.avif">
+                  <source type="image/webp" srcset="images/news/news-3.webp">
+                  <img class="news__img" src="images/news/news-3.jpg" alt="news">
                 </picture>
                 <div class="news__info">
-                  <h2 class="news__title">AM Express has announced new service</h2>
+                  <h2 class="news__title">Merkel's no-nonsense finance minister Schäuble dies</h2>
                   <p class="news__date"><time>10/26/2023 5:50</time> AM EST</p>
                   <div class="news__descr">
-                    <p>
-                      AM Express has announced the launch of a new service for shipments between the U.S. and China The
-                      new service will
-                      enable AM Express customers to quickly and reliably deliver their shipments from China to the U.S.
-                      and vice versa.
-                    </p>
-                    <p>
-                      With the new service, customers will be able to reduce the delivery time of their goods to a few
-                      days, which will
-                      significantly speed up the process of trade between the two countries. In addition, the company
-                      provides a wide range of
-                      services, including packaging and customs clearance.
-                    </p>
-                    <p>
-                      The new service is already available to customers in New York and Los Angeles, and will soon be
-                      expanded to other US
-                      cities.
-                    </p>
+                    <div>
+                      <p>
+                        German ex-finance minister Wolfgang Schäuble, who helped steer the eurozone through the debt
+                        crisis, has died at the age
+                        of 81.
+                      </p>
+                      <p>
+                        An MP for 51 years in Germany's Bundestag, he played a key role in negotiating German
+                        reunification after the fall of
+                        the Berlin Wall in 1989.
+                      </p>
+                      <p>
+                        He then survived an attempt on his life by a mentally unstable gunman.
+                      </p>
+                      <p>
+                        And although never chancellor, Schäuble was widely viewed as one of Germany's most influential
+                        post-war politicians.
+                      </p>
+                    </div>
+                    <div>
+                      <p>
+                        Beyond Germany, he became a hate figure for many Greeks during the eurozone debt crisis, as
+                        architect of a highly
+                        unpopular austerity programme imposed on their country.
+                      </p>
+                    </div>
+                    <div>
+                      <p>
+                        Wolfgang Schäuble joined the conservative CDU party in 1965 and entered the Bundestag seven
+                        years later when he was 30.
+                      </p>
+                      <p>
+                        As interior minister of West Germany, he co-signed the treaty in East Berlin that unified the
+                        country in August 1990. He
+                        later called reunification "the high point of my political life".
+                      </p>
+                    </div>
+                    <div>
+                      <p>
+                        Nine days after Germany was formally reunited, he was shot in the spinal cord and jaw during an
+                        election campaign event
+                        and used a wheelchair for the rest of his life.
+                      </p>
+                      <p>
+                        He returned to the public stage months later with an impassioned call for the reunified
+                        country's capital to be moved
+                        from Bonn to Berlin.
+                      </p>
+                    </div>
+                    <div>
+                      <p>
+                        He went on to lead the CDU in 1998, until Angela Merkel took over in 2000 in the middle of a
+                        party donations scandal.
+                      </p>
+                      <p>
+                        On becoming Germany's chancellor in 2005, she appointed him first as interior minister then
+                        later as finance minister,
+                        where he spent eight years focused on balancing the German budget.
+                      </p>
+                      <p>
+                        He achieved Germany's so-called schwarze Null or black zero budget deficit in 2014 and he was
+                        widely viewed as the
+                        driving force behind the austerity policies adopted by the eurozone in response to the debt
+                        crisis that began in 2008.
+                      </p>
+                      <p>
+                        "Greece's debt crisis and the crises it generated offer a clear warning to European policymakers
+                        not to allow public
+                        debt to pile up indefinitely," he told the European Parliament in 2011.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <label class="checkbox-label checkbox-circle">
-                  <input class="checkbox-input input-hidden" type="checkbox">
-                  <div class="checkbox-cstm"></div>
-                  <span class="news__read-on">Mark As Read</span>
-                  <span class="news__read-off">has been read</span>
-                </label>
-              </div>
-              <div class="news__item">
-                <picture>
-                  <source type="image/avif" srcset="images/news/news-2.avif">
-                  <source type="image/webp" srcset="images/news/news-2.webp">
-                  <img class="news__img" src="images/news/news-2.jpg" alt="news">
-                </picture>
-                <div class="news__info">
-                  <h2 class="news__title">Exchange Rate</h2>
-                  <p class="news__date"><time>10/26/2023 5:50</time> AM EST</p>
-                  <div class="news__descr">
-                    <p>
-                      The dollar exchange rate against the euro continues to fluctuate within one percent. Experts
-                      believe that this is due to
-                      uncertainty in the oil market and possible influence of political events in Europe on the dollar
-                      rate.
-                    </p>
-                  </div>
-                </div>
+                <button class="news__item-more-btn btn--action">Show more</button>
                 <label class="checkbox-label checkbox-circle">
                   <input class="checkbox-input input-hidden" type="checkbox">
                   <div class="checkbox-cstm"></div>
@@ -97,6 +126,19 @@
   <script src="libs/jquery/jquery.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.umd.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    //============================================================NEWS-MORE-START
+    const mewsMoreBtn = document.querySelectorAll('.news__item-more-btn')
+    const mewsMoreDescr = document.querySelectorAll('.news__descr')
+
+      mewsMoreBtn.forEach((el) => {
+        el.addEventListener('click', (e) => {
+          el.previousElementSibling.classList.add('news-more-active');
+          el.style.display = 'none';
+        });
+      });
+    //============================================================NEWS-MORE-END
+  </script>
 </body>
 
 </html>

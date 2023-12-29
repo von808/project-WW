@@ -173,11 +173,14 @@
 
 @media (max-width:540px) {
 
+  .modals__templates .form__input-box--cstm:nth-child(1),
+  .modals__templates .form__input-box--cstm:nth-child(2),
   .sender-receiver .form__input-box--cstm:nth-child(1),
   .sender-receiver .form__input-box--cstm:nth-child(2) {
     width: 100%;
   }
 
+  .modals__templates .form__input-boxes,
   .sender-receiver__item .form__input-boxes {
     flex-direction: column;
   }
@@ -306,6 +309,10 @@
     gap: 0;
     margin-top: 30px;
   }
+
+  .modals__templates .modal-content {
+    padding: 20px;
+  }
 }
 
 @media (max-width:420px) {
@@ -357,5 +364,10 @@
 
   .admin-support .tech-support__input {
     width: 100%;
+  }
+
+  .api__copy .copy-box {
+    padding: 8px 15px;
+    margin: 0 -15px;
   }
 }

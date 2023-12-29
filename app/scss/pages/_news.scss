@@ -1,5 +1,7 @@
 .news {
-  &__inner {}
+  &__inner {
+    max-width: 886px;
+  }
 
   &__items {
     display: flex;
@@ -23,6 +25,11 @@
     .news__img {
       opacity: .5;
     }
+  }
+
+  &__item-more-btn {
+    width: fit-content;
+    margin: 0 auto;
   }
 
   &__img {
@@ -55,8 +62,21 @@
     flex-direction: column;
     gap: 1em;
 
+    max-height: 171px;
+    overflow: hidden;
+    
     font-size: 14px;
     font-weight: 400;
+    
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  .news__info.news-more-active .news__descr {
+    max-height: 600px;
+    overflow: auto;
   }
 
   &__read-off {

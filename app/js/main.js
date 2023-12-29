@@ -20,29 +20,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sidebarBtn.onclick = function () {
     sidebar.classList.toggle('sidebar-open')
-  }
+  };
   //============================================================SIDEBAR-END
 
   //============================================================COPY-START
-  let copy = (copyText) => {
-    document.getElementById(copyText).select();
+  let copyEmailBtn = document.querySelectorAll('.copy-btn');
 
-    document.execCommand('copy');
-  }
+  copyEmailBtn.forEach((el) => {
+    el.addEventListener('click', function (event) {
+      let emailLink = el.parentNode.querySelector('.copy-input');
+      let range = document.createRange();
+      range.selectNode(emailLink);
+      window.getSelection().addRange(range);
 
-  (function () {
-    var caseItem = document.querySelectorAll('.copy-box > .btn__copy'),
-      active = document.getElementsByClassName('copied');
+      try {
+        let successful = document.execCommand('copy');
+        let msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Copy email command was ' + msg);
+      } catch (err) {
+        console.log('Oops, unable to copy');
+      }
 
-    Array.from(caseItem).forEach(function (item, i, caseItem) {
-      item.addEventListener('click', function (e) {
-        if (active.length > 0 && active[0] !== this)
-          active[0].classList.remove('copied');
-
-        this.classList.toggle('copied');
-      });
+      window.getSelection().removeAllRanges();
     });
-  })();
+  });
   //============================================================COPY-END
 
   //============================================================DROPDOWN-START
@@ -59,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
     const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
     const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
+    const dropDownListItemsS = dropDownList.querySelectorAll('.dropdown__list-item--searchid');
     const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
 
     dropDownBtn.addEventListener('click', function (e) {
@@ -73,6 +75,12 @@ document.addEventListener('DOMContentLoaded', () => {
         dropDownBtn.focus();
         dropDownInput.value = this.dataset.value;
         dropDownList.classList.remove('dropdown__list--visible');
+      });
+    });
+
+    dropDownListItemsS.forEach(function (listItemS) {
+      listItemS.addEventListener('click', function (e) {
+        e.stopPropagation()
       });
     });
 
@@ -289,6 +297,23 @@ document.addEventListener('DOMContentLoaded', () => {
     scoreNR.innerHTML = scoreNRBox;
   }
   //============================================================TICKETS-HISTORY-END
+
+  //============================================================TICKETS-MORE-START
+  const ticketsMoreBtn = document.querySelectorAll('.tickets__history-list-item--more-btn')
+  const ticketsMoreList = document.querySelectorAll('.tickets__history-list--more')
+
+  ticketsMoreList.forEach((el) => {
+    const el2 = el;
+
+    ticketsMoreBtn.forEach((el) => {
+      el.addEventListener('click', (e) => {
+        el.classList.toggle('tickets-more');
+        el2.classList.toggle('tickets-more');
+      });
+    });
+
+  });
+  //============================================================TICKETS-MORE-END
 
   //============================================================TAB-START
   const tabBtn = document.querySelectorAll('.tab-btn')

@@ -215,7 +215,7 @@
     .copy-box {
       margin-bottom: 20px;
 
-      .input {
+      .copy-input {
         font-size: 16px;
         font-weight: 400;
         text-transform: uppercase;
@@ -322,7 +322,8 @@
         min-width: 180px;
         width: 180px;
         max-width: 180px;
-        input{
+
+        input {
           max-width: calc(180px - 24px);
         }
       }
@@ -331,7 +332,8 @@
         min-width: 100px;
         width: 100px;
         max-width: 100px;
-        input{
+
+        input {
           max-width: calc(100px - 24px);
         }
       }
@@ -340,7 +342,8 @@
         min-width: 140px;
         width: 140px;
         max-width: 140px;
-        input{
+
+        input {
           max-width: calc(140px - 24px);
         }
       }
@@ -369,5 +372,96 @@
     border-radius: 4px;
     background: #FFF;
     box-shadow: -5px 5px 10px 0px rgba(0, 0, 0, 0.10);
+  }
+
+  &__templates {
+    max-width: 560px;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .modal-content {
+      width: 100%;
+      padding: 40px;
+      margin: 20px 0px;
+      border-radius: 4px;
+      background: #FFF;
+    }
+
+    .form__input-box--cstm {
+      &:nth-child(1) {
+        width: calc(100% - 180px - 20px);
+      }
+
+      &:nth-child(2) {
+        width: 180px;
+      }
+    }
+
+    .sender-receiver__form .form__input-box--cstm:nth-child(2) {
+      .form__input {
+        padding-right: 45px;
+      }
+
+      .btn--reset {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 22px;
+      }
+
+      .icon-reset {}
+    }
+
+    .cstm-bottom {
+      width: 100%;
+      margin-top: 20px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  &__templates-delete {
+    max-width: 200px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    background: #FFF;
+
+    &-title {
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+
+      margin-bottom: 20px;
+    }
+
+    &-btns {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  &__tickets-message {
+    max-width: 540px;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .modal-content {
+      margin: 20px 0px;
+    }
   }
 }

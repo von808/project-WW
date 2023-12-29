@@ -32,6 +32,16 @@
     stroke: #00BE35;
   }
 
+  &~.copy-input {
+    color: #00BE35;
+  }
+}
+
+.copy-btn.copied {
+  .icon-copy {
+    stroke: #00BE35;
+  }
+
   &~.input {
     color: #00BE35;
   }
