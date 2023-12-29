@@ -6,29 +6,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sidebarBtn.onclick = function () {
     sidebar.classList.toggle('sidebar-open')
-  }
+  };
   //============================================================SIDEBAR-END
 
   //============================================================COPY-START
-  let copy = (copyText) => {
-    document.getElementById(copyText).select();
+  let copyEmailBtn = document.querySelectorAll('.copy-btn');
 
-    document.execCommand('copy');
-  }
+  copyEmailBtn.forEach((el) => {
+    el.addEventListener('click', function (event) {
+      
+      let emailLink = el.parentNode.querySelector('.copy-input');
+      let range = document.createRange();
+      range.selectNode(emailLink);
+      window.getSelection().addRange(range);
 
-  (function () {
-    var caseItem = document.querySelectorAll('.copy-box > .btn__copy'),
-      active = document.getElementsByClassName('copied');
+      try {
+        let successful = document.execCommand('copy');
+        let msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Copy email command was ' + msg);
+      } catch (err) {
+        console.log('Oops, unable to copy');
+      }
 
-    Array.from(caseItem).forEach(function (item, i, caseItem) {
-      item.addEventListener('click', function (e) {
-        if (active.length > 0 && active[0] !== this)
-          active[0].classList.remove('copied');
-
-        this.classList.toggle('copied');
-      });
+      window.getSelection().removeAllRanges();
     });
-  })();
+  });
   //============================================================COPY-END
 
   //============================================================DROPDOWN-START
