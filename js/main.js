@@ -1,5 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  //============================================================SELECT-AND-COPY-START
+  const selectAll = document.querySelector('.select-all')
+  const copySelect = document.querySelector('.copy-select')
+
+  const selectBoxes = document.querySelectorAll('.purchases__item-box');
+  const selectCheckboxes = document.querySelectorAll('.purchases__item-box .checkbox-angle .checkbox-input');
+  const selectCopyTrack = document.querySelectorAll('.purchases__item-box .copy-input');
+
+
+  selectCheckboxes.forEach((elCheckbox) => {
+    selectAll.addEventListener('click', (e) => {
+      elCheckbox.checked = true;
+    });
+  });
+  //============================================================SELECT-AND-COPY-END
+
+  //============================================================PAYMENT-START
   (function () {
     var caseItem = document.querySelectorAll('.wallet-payment'),
       active = document.getElementsByClassName('payment-active');
@@ -13,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   })();
+  //============================================================PAYMENT-END
 
   //============================================================SIDEBAR-START
   const sidebarBtn = document.querySelector('.sidebar__btn-open');
@@ -34,16 +52,32 @@ document.addEventListener('DOMContentLoaded', () => {
       window.getSelection().addRange(range);
 
       try {
+        // let asd = this.parentNode.querySelector('.copy-input').textContent.trim();
         let successful = document.execCommand('copy');
         let msg = successful ? 'successful' : 'unsuccessful';
-        console.log('Copy email command was ' + msg);
+        console.log('Copy email command was' + msg);
       } catch (err) {
         console.log('Oops, unable to copy');
       }
 
       window.getSelection().removeAllRanges();
+
+      // el.parentNode.classList.add('copied');
     });
   });
+  (function () {
+    let caseItem = copyEmailBtn;
+    let active = document.getElementsByClassName('copied');
+
+    Array.from(caseItem).forEach(function (item, i, caseItem) {
+      item.addEventListener('click', function (e) {
+        if (active.length > 0 && active[0] !== this.parentNode)
+          active[0].classList.remove('copied');
+
+        this.parentNode.classList.toggle('copied');
+      });
+    });
+  })();
   //============================================================COPY-END
 
   //============================================================DROPDOWN-START

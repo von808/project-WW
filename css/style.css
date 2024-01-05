@@ -819,6 +819,12 @@ hr {
   gap: 10px;
   flex-direction: row-reverse;
 }
+.copy-box.copied .icon-copy {
+  stroke: #00BE35;
+}
+.copy-box.copied .copy-input {
+  color: #00BE35;
+}
 
 .btn__copy.copied .icon-copy {
   stroke: #00BE35;
@@ -1355,6 +1361,72 @@ hr {
 .modals__tickets-message .modal-content {
   margin: 20px 0px;
 }
+.modals__tickets-message .tickets__form-input--box-track {
+  display: none;
+}
+.modals__tickets-message .tickets__form-input--box-type:has(.dropdown__button .regarding-the-label) ~ .tickets__form-input--box-track {
+  display: flex;
+}
+.modals__withdraw {
+  max-width: 540px;
+  width: 100%;
+  padding: 30px 20px;
+  border-radius: 4px;
+  background: #FFF;
+}
+.modals__withdraw .modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.modals__withdraw-title {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+.modals__withdraw .balance__elem-input--box {
+  max-width: 200px;
+  margin: 0 auto;
+}
+.modals__withdraw-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.modals__api {
+  max-width: 200px;
+  width: 100%;
+  padding: 30px 20px;
+  border-radius: 4px;
+  background: #FFF;
+}
+.modals__api .modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.modals__api-title {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+.modals__api-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.modals__invite {
+  max-width: 300px;
+  width: 100%;
+  padding: 30px 20px;
+  border-radius: 4px;
+  background: #FFF;
+}
+.modals__invite .copy-box {
+  justify-content: center !important;
+}
 
 input[type=number],
 input[type=number]::placeholder {
@@ -1830,6 +1902,12 @@ input[type=number]::placeholder {
 .news__item:has(.checkbox-input:checked) .news__img {
   opacity: 0.5;
 }
+.news__item:nth-child(n+2) {
+  display: none;
+}
+.news__items.history-show .news__item:nth-child(n+2) {
+  display: flex;
+}
 .news__item-more-btn {
   width: fit-content;
   margin: 0 auto;
@@ -1891,6 +1969,15 @@ input[type=number]::placeholder {
   font-size: 12px;
   font-weight: 600;
 }
+.news__item-more-btn.news-more-active .news__more-btn--more {
+  display: none;
+}
+.news__item-more-btn.news-more-active .news__more-btn--less {
+  display: block;
+}
+.news .news__more-btn--less {
+  display: none;
+}
 
 .sender-receiver {
   margin-bottom: 80px;
@@ -1929,6 +2016,9 @@ input[type=number]::placeholder {
 }
 .sender-receiver .dropdown__button {
   padding: 23px 25px 8px;
+}
+.sender-receiver .autoComplete_wrapper .logo__img {
+  margin-left: 20px;
 }
 
 .custom-line-item {
@@ -2209,7 +2299,6 @@ input[type=number]::placeholder {
   background-position: center;
 }
 .details .dropdown__list {
-  max-height: 85px;
   top: 37px;
 }
 .details .dropdown__list-item {
@@ -2520,6 +2609,45 @@ input[type=number]::placeholder {
   border: none;
   background-color: #4D4AFD;
   pointer-events: all;
+}
+.balance .balance__elem-input--box:has(.form-group) {
+  padding: 0;
+  border: none;
+}
+.balance .balance__elem-input--box .dropdown__button {
+  height: 35px;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+.balance .balance__elem-input--box .dropdown__list {
+  top: calc(100% + 5px);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.balance .balance__elem-input--box .dropdown__list-item {
+  font-size: 14px;
+  font-weight: 400;
+  height: 35px;
+  justify-content: center;
+}
+.balance .balance__elem-input--box .icon-chevron {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: calc(50% - 45px);
+  z-index: 1;
+  pointer-events: none;
+}
+.balance .balance__elem-input--box .dropdown__list-item-content {
+  position: relative;
+}
+.balance .balance__elem-input--box .dropdown__list-item-content::before {
+  content: "$";
+  position: absolute;
+  left: -7px;
+}
+.balance .balance__elem-input--box:has(.balance__elem-input--btn) {
+  padding: 0;
 }
 .balance__elem-box--btn {
   flex: 1;
@@ -3236,6 +3364,7 @@ input[type=number]::placeholder {
   transform: translateY(-50%);
   right: 13px;
   stroke: #242424;
+  pointer-events: none;
 }
 .tickets__send-priority .dropdown__button {
   height: 35px;
@@ -3249,6 +3378,10 @@ input[type=number]::placeholder {
 .tickets__send-priority .dropdown__list-item {
   height: 35px;
   padding: 5px 13px;
+}
+
+.tickets__form-input--box-priority .dropdown__button {
+  padding-left: 77px;
 }
 
 .tickets__form-input--box.choice-user .icon-chevron,

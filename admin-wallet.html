@@ -415,7 +415,7 @@
                 <div class="balance__elem-box">
                   <span>Payouts & Taxes</span>
                   <div class="balance__elem-input--box">
-                    <button class="balance__elem-input--btn">
+                    <button class="balance__elem-input--btn modal-open" data-path="modal-withdraw">
                       <svg class="icon-use">
                         <use xlink:href="#use"></use>
                       </svg>
@@ -1393,32 +1393,50 @@
                   </div>
                 </div>
               </div>
-              <div class="tickets__form-input--box">
+              <div class="tickets__form-input--box tickets__form-input--box-type">
                 <div class="form-group">
                   <div class="dropdown">
                     <span class="tickets__form-input-title">Type:</span>
                     <button class="dropdown__button" type="button">
-                      <span class="dropdown__list-item-content">Regarding The Label</span>
+                      <span class="dropdown__list-item-content regarding-the-label">Regarding The Label</span>
                     </button>
                     <ul class="dropdown__list">
                       <li class="dropdown__list-item" data-value="regarding-the-label">
-                        <span class="dropdown__list-item-content">Regarding The Label</span>
+                        <span class="dropdown__list-item-content regarding-the-label">Regarding The Label</span>
                       </li>
                       <li class="dropdown__list-item" data-value="general-questions">
-                        <span class="dropdown__list-item-content">General Questions</span>
+                        <span class="dropdown__list-item-content general-questions">General Questions</span>
                       </li>
                     </ul>
                     <input type="text" name="select-category" value="regarding-the-label" class="dropdown__input-hidden">
                   </div>
                 </div>
               </div>
-              <div class="tickets__form-input--box">
+              <div class="tickets__form-input--box tickets__form-input--box-track">
                 <span class="tickets__form-input--placeholder">Track:</span>
                 <input class="tickets__form-input" type="text" value="KN190LP333PY344">
               </div>
-              <div class="tickets__form-input--box">
-                <span class="tickets__form-input--placeholder">Priority:</span>
-                <input class="tickets__form-input" type="text" value="Medium">
+              <div class="tickets__form-input--box tickets__form-input--box-priority">
+                <div class="form-group">
+                  <div class="dropdown">
+                    <span class="tickets__form-input-title">Priority:</span>
+                    <button class="dropdown__button" type="button">
+                      <span class="dropdown__list-item-content">Medium</span>
+                    </button>
+                    <ul class="dropdown__list">
+                      <li class="dropdown__list-item" data-value="high">
+                        <span class="dropdown__list-item-content">High</span>
+                      </li>
+                      <li class="dropdown__list-item" data-value="medium">
+                        <span class="dropdown__list-item-content">Medium</span>
+                      </li>
+                      <li class="dropdown__list-item" data-value="low">
+                        <span class="dropdown__list-item-content">Low</span>
+                      </li>
+                    </ul>
+                    <input type="text" name="select-category" value="medium" class="dropdown__input-hidden">
+                  </div>
+                </div>
               </div>
             </div>
             <textarea class="tickets__form-input--box tickets__form-input--textarea"
@@ -1431,6 +1449,42 @@
               </div>
               <button class="btn modal-close">Send</button>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal modals__withdraw" data-target="modal-withdraw">
+        <div class="modal-content">
+          <div class="modals__withdraw-title">Please enter the desired withdrawal amount, after successful
+            withdrawal your account will be closed</div>
+          <div class="balance__elem-input--box">
+            <div class="input-price--box">
+              <input class="input-price" type="number" placeholder="0" value="">
+            </div>
+          </div>
+          <div class=" modals__templates-delete-btns">
+            <button class="btn--muted modal-close">Make Withdrawal</button>
+            <button class="btn modal-close">Cancel</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal modals__api" data-target="modal-api">
+        <div class="modal-content">
+          <div class="modals__api-title">Do you want to reset API Key?</div>
+          <div class=" modals__templates-delete-btns">
+            <button class="btn modal-close">YES</button>
+            <button class="btn--muted modal-close">NO</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal modals__invite" data-target="modal-invite">
+        <div class="modal-content">
+          <div class="copy-box">
+            <button class="copy-btn">
+              <svg class="icon-copy">
+                <use xlink:href="#icon-copy"></use>
+              </svg>
+            </button>
+            <span class="copy-input">ww.biz/invite/jdfo49hwo94ofowj3</span>
           </div>
         </div>
       </div>
