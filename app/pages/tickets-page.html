@@ -49,7 +49,7 @@
                 </div>
               </div>
             </div>
-            <div class="tickets__content">
+            <div class="tickets__content tickets-page__new-create">
               <div class="tickets-page__box">
                 <div class="tickets-page__box-text">
                   <p>
@@ -64,7 +64,77 @@
                     Click on button Open New Ticket. We look forward to hearing from you!
                   </p>
                 </div>
-                <a class="btn" href="#!">Open New Ticket</a>
+                <button class="btn tickets-page__new-btn">Open New Ticket</button>
+              </div>
+            </div>
+            <div class="tickets__content tickets-page__new" style="display: none;">
+              <div class="tickets__not">You Have Not Tickets</div>
+              <div class="tickets__form-box">
+                <form class="tickets__form">
+                  <h3 class="tickets__form-title">Describe your problem here</h3>
+                  <div class="tickets__form-inputs">
+                    <div class="tickets__form-input--box">
+                      <div class="form-group">
+                        <div class="dropdown">
+                          <span class="tickets__form-input-title">Type:</span>
+                          <button class="dropdown__button" type="button">
+                            <span class="dropdown__list-item-content">Regarding The Label</span>
+                          </button>
+                          <ul class="dropdown__list">
+                            <li class="dropdown__list-item" data-value="regarding-the-label">
+                              <span class="dropdown__list-item-content">Regarding The Label</span>
+                            </li>
+                            <li class="dropdown__list-item" data-value="general-questions">
+                              <span class="dropdown__list-item-content">General Questions</span>
+                            </li>
+                          </ul>
+                          <input type="text" name="select-category" value="regarding-the-label"
+                            class="dropdown__input-hidden">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tickets__form-input--box">
+                      <span class="tickets__form-input--placeholder">Track:</span>
+                      <input class="tickets__form-input" type="text" value="KN190LP333PY344">
+                    </div>
+                    <div class="tickets__form-input--box tickets__form-input--box-priority">
+                      <div class="form-group">
+                        <div class="dropdown">
+                          <span class="tickets__form-input-title">Priority:</span>
+                          <button class="dropdown__button" type="button">
+                            <span class="dropdown__list-item-content">Medium</span>
+                          </button>
+                          <ul class="dropdown__list">
+                            <li class="dropdown__list-item" data-value="high">
+                              <span class="dropdown__list-item-content">High</span>
+                            </li>
+                            <li class="dropdown__list-item" data-value="medium">
+                              <span class="dropdown__list-item-content">Medium</span>
+                            </li>
+                            <li class="dropdown__list-item" data-value="low">
+                              <span class="dropdown__list-item-content">Low</span>
+                            </li>
+                          </ul>
+                          <input type="text" name="select-category" value="medium" class="dropdown__input-hidden">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <textarea class="tickets__form-input--box tickets__form-input--textarea"
+                    placeholder="White Your Message..."></textarea>
+                  <div class="tickets__send-chat-bottom">
+                    <div class="add-file__box">
+                      <input class="add-file__input" type="file">
+                      <img class="add-file__img" src="images/icons/attach.svg" alt="img">
+                      <span class="add-file__text">Attach File</span>
+                    </div>
+                    <button class="btn">Send</button>
+                  </div>
+                </form>
+                <div class="tickets__send-bottom">
+                  <button class="tickets__send-bottom-btn">Close Ticket</button>
+                  <button class="tickets__send-bottom-btn">Open This Ticket Again</button>
+                </div>
               </div>
             </div>
           </div>
@@ -76,6 +146,16 @@
   <script src="libs/jquery/jquery.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.umd.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    const ticketsNewBtn = document.querySelector('.tickets-page__new-btn');
+    const ticketsNewCreate = document.querySelector('.tickets-page__new-create');
+    const ticketsNew = document.querySelector('.tickets-page__new');
+
+    ticketsNewBtn.addEventListener('click', () => {
+      ticketsNewCreate.style.display = "none";
+      ticketsNew.style.display = "flex";
+    })
+  </script>
 </body>
 
 </html>

@@ -53,7 +53,7 @@
             </div>
             <div class="user__btns">
               <button class="btn--muted modal-open" data-path="modal-new-user">New User</button>
-              <a class="btn--muted" href="#!">Invite</a>
+              <button class="btn--muted modal-open" data-path="modal-invite">Invite</button>
               <a class="btn--muted" href="admin-service.html">Based Rates</a>
               <button class="btn">Save</button>
             </div>
@@ -88,7 +88,7 @@
                         <th>Status</th>
                         <th>Action</th>
                       </tr>
-                      <tr>
+                      <tr class="user-tab-line">
                         <td>JRBT4NCJ</td>
                         <td>
                           <div class="input-price--box">
@@ -154,7 +154,7 @@
                           <button class="btn--action">SAVE</button>
                         </td>
                       </tr>
-                      <tr>
+                      <tr class="user-tab-line">
                         <td>HS9TWSH</td>
                         <td>
                           <div class="input-price--box">
@@ -220,7 +220,7 @@
                           <button class="btn--action">SAVE</button>
                         </td>
                       </tr>
-                      <tr>
+                      <tr class="user-tab-line">
                         <td>E5OLF30Y</td>
                         <td>
                           <div class="input-price--box">
@@ -286,7 +286,7 @@
                           <button class="btn--action">SAVE</button>
                         </td>
                       </tr>
-                      <tr>
+                      <tr class="user-tab-line">
                         <td>GQXV5TES</td>
                         <td>
                           <div class="input-price--box">
@@ -368,7 +368,7 @@
                         <th>Status</th>
                         <th>Action</th>
                       </tr>
-                      <tr>
+                      <tr class="user-tab-line">
                         <td>JRBT4NCJ</td>
                         <td>
                           <div class="input-price--box">
@@ -434,7 +434,7 @@
                           <button class="btn--action">SAVE</button>
                         </td>
                       </tr>
-                      <tr>
+                      <tr class="user-tab-line">
                         <td>HS9TWSH</td>
                         <td>
                           <div class="input-price--box">
@@ -501,7 +501,7 @@
                           <button class="btn--action">SAVE</button>
                         </td>
                       </tr>
-                      <tr>
+                      <tr class="user-tab-line">
                         <td>E5OLF30Y</td>
                         <td>
                           <div class="input-price--box">
@@ -563,12 +563,12 @@
                               <input type="text" name="select-category" value="inactive" class="dropdown__input-hidden">
                             </div>
                           </div>
-                          </td>
-                          <td>
-                            <button class="btn--action">SAVE</button>
-                          </td>
+                        </td>
+                        <td>
+                          <button class="btn--action">SAVE</button>
+                        </td>
                       </tr>
-                      <tr>
+                      <tr class="user-tab-line">
                         <td>GQXV5TES</td>
                         <td>
                           <div class="input-price--box">
@@ -649,6 +649,36 @@
   <script src="libs/jquery/jquery.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.umd.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    //============================================================TAB-START
+    const tabBtn = document.querySelectorAll('.tab-btn')
+    const tabItem = document.querySelectorAll('.tab-item')
+
+    tabBtn.forEach(tabClick);
+
+    function tabClick(item) {
+      item.addEventListener('click', function () {
+        let currentBtn = item;
+        let tabId = currentBtn.getAttribute('data-tab');
+        let currentTab = document.querySelector(tabId);
+
+        if (!currentBtn.classList.contains('tab-active')) {
+
+          tabBtn.forEach(function (item) {
+            item.classList.remove('tab-active');
+          });
+
+          tabItem.forEach(function (item) {
+            item.classList.remove('tab-active');
+          });
+
+          currentBtn.classList.add('tab-active');
+          currentTab.classList.add('tab-active');
+        }
+      })
+    }
+    //============================================================TAB-END
+  </script>
 </body>
 
 </html>

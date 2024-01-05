@@ -424,7 +424,7 @@
             </div>
             <div class="user__btns">
               <button class="btn--muted modal-open" data-path="modal-new-user">New User</button>
-              <a class="btn--muted" href="#!">Invite</a>
+              <button class="btn--muted modal-open" data-path="modal-invite">Invite</button>
               <a class="btn--muted" href="admin-service.html">Based Rates</a>
               <button class="btn">Save</button>
             </div>
@@ -459,7 +459,7 @@
                         <th>Status</th>
                         <th>Action</th>
                       </tr>
-                      <tr>
+                      <tr class="user-tab-line">
                         <td>JRBT4NCJ</td>
                         <td>
                           <div class="input-price--box">
@@ -525,7 +525,7 @@
                           <button class="btn--action">SAVE</button>
                         </td>
                       </tr>
-                      <tr>
+                      <tr class="user-tab-line">
                         <td>HS9TWSH</td>
                         <td>
                           <div class="input-price--box">
@@ -591,7 +591,7 @@
                           <button class="btn--action">SAVE</button>
                         </td>
                       </tr>
-                      <tr>
+                      <tr class="user-tab-line">
                         <td>E5OLF30Y</td>
                         <td>
                           <div class="input-price--box">
@@ -657,7 +657,7 @@
                           <button class="btn--action">SAVE</button>
                         </td>
                       </tr>
-                      <tr>
+                      <tr class="user-tab-line">
                         <td>GQXV5TES</td>
                         <td>
                           <div class="input-price--box">
@@ -739,7 +739,7 @@
                         <th>Status</th>
                         <th>Action</th>
                       </tr>
-                      <tr>
+                      <tr class="user-tab-line">
                         <td>JRBT4NCJ</td>
                         <td>
                           <div class="input-price--box">
@@ -805,7 +805,7 @@
                           <button class="btn--action">SAVE</button>
                         </td>
                       </tr>
-                      <tr>
+                      <tr class="user-tab-line">
                         <td>HS9TWSH</td>
                         <td>
                           <div class="input-price--box">
@@ -872,7 +872,7 @@
                           <button class="btn--action">SAVE</button>
                         </td>
                       </tr>
-                      <tr>
+                      <tr class="user-tab-line">
                         <td>E5OLF30Y</td>
                         <td>
                           <div class="input-price--box">
@@ -934,12 +934,12 @@
                               <input type="text" name="select-category" value="inactive" class="dropdown__input-hidden">
                             </div>
                           </div>
-                          </td>
-                          <td>
-                            <button class="btn--action">SAVE</button>
-                          </td>
+                        </td>
+                        <td>
+                          <button class="btn--action">SAVE</button>
+                        </td>
                       </tr>
-                      <tr>
+                      <tr class="user-tab-line">
                         <td>GQXV5TES</td>
                         <td>
                           <div class="input-price--box">
@@ -1718,32 +1718,50 @@
                   </div>
                 </div>
               </div>
-              <div class="tickets__form-input--box">
+              <div class="tickets__form-input--box tickets__form-input--box-type">
                 <div class="form-group">
                   <div class="dropdown">
                     <span class="tickets__form-input-title">Type:</span>
                     <button class="dropdown__button" type="button">
-                      <span class="dropdown__list-item-content">Regarding The Label</span>
+                      <span class="dropdown__list-item-content regarding-the-label">Regarding The Label</span>
                     </button>
                     <ul class="dropdown__list">
                       <li class="dropdown__list-item" data-value="regarding-the-label">
-                        <span class="dropdown__list-item-content">Regarding The Label</span>
+                        <span class="dropdown__list-item-content regarding-the-label">Regarding The Label</span>
                       </li>
                       <li class="dropdown__list-item" data-value="general-questions">
-                        <span class="dropdown__list-item-content">General Questions</span>
+                        <span class="dropdown__list-item-content general-questions">General Questions</span>
                       </li>
                     </ul>
                     <input type="text" name="select-category" value="regarding-the-label" class="dropdown__input-hidden">
                   </div>
                 </div>
               </div>
-              <div class="tickets__form-input--box">
+              <div class="tickets__form-input--box tickets__form-input--box-track">
                 <span class="tickets__form-input--placeholder">Track:</span>
                 <input class="tickets__form-input" type="text" value="KN190LP333PY344">
               </div>
-              <div class="tickets__form-input--box">
-                <span class="tickets__form-input--placeholder">Priority:</span>
-                <input class="tickets__form-input" type="text" value="Medium">
+              <div class="tickets__form-input--box tickets__form-input--box-priority">
+                <div class="form-group">
+                  <div class="dropdown">
+                    <span class="tickets__form-input-title">Priority:</span>
+                    <button class="dropdown__button" type="button">
+                      <span class="dropdown__list-item-content">Medium</span>
+                    </button>
+                    <ul class="dropdown__list">
+                      <li class="dropdown__list-item" data-value="high">
+                        <span class="dropdown__list-item-content">High</span>
+                      </li>
+                      <li class="dropdown__list-item" data-value="medium">
+                        <span class="dropdown__list-item-content">Medium</span>
+                      </li>
+                      <li class="dropdown__list-item" data-value="low">
+                        <span class="dropdown__list-item-content">Low</span>
+                      </li>
+                    </ul>
+                    <input type="text" name="select-category" value="medium" class="dropdown__input-hidden">
+                  </div>
+                </div>
               </div>
             </div>
             <textarea class="tickets__form-input--box tickets__form-input--textarea"
@@ -1759,11 +1777,77 @@
           </div>
         </div>
       </div>
+      <div class="modal modals__withdraw" data-target="modal-withdraw">
+        <div class="modal-content">
+          <div class="modals__withdraw-title">Please enter the desired withdrawal amount, after successful
+            withdrawal your account will be closed</div>
+          <div class="balance__elem-input--box">
+            <div class="input-price--box">
+              <input class="input-price" type="number" placeholder="0" value="">
+            </div>
+          </div>
+          <div class=" modals__templates-delete-btns">
+            <button class="btn--muted modal-close">Make Withdrawal</button>
+            <button class="btn modal-close">Cancel</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal modals__api" data-target="modal-api">
+        <div class="modal-content">
+          <div class="modals__api-title">Do you want to reset API Key?</div>
+          <div class=" modals__templates-delete-btns">
+            <button class="btn modal-close">YES</button>
+            <button class="btn--muted modal-close">NO</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal modals__invite" data-target="modal-invite">
+        <div class="modal-content">
+          <div class="copy-box">
+            <button class="copy-btn">
+              <svg class="icon-copy">
+                <use xlink:href="#icon-copy"></use>
+              </svg>
+            </button>
+            <span class="copy-input">ww.biz/invite/jdfo49hwo94ofowj3</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <script src="libs/jquery/jquery.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.umd.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    //============================================================TAB-START
+    const tabBtn = document.querySelectorAll('.tab-btn')
+    const tabItem = document.querySelectorAll('.tab-item')
+
+    tabBtn.forEach(tabClick);
+
+    function tabClick(item) {
+      item.addEventListener('click', function () {
+        let currentBtn = item;
+        let tabId = currentBtn.getAttribute('data-tab');
+        let currentTab = document.querySelector(tabId);
+
+        if (!currentBtn.classList.contains('tab-active')) {
+
+          tabBtn.forEach(function (item) {
+            item.classList.remove('tab-active');
+          });
+
+          tabItem.forEach(function (item) {
+            item.classList.remove('tab-active');
+          });
+
+          currentBtn.classList.add('tab-active');
+          currentTab.classList.add('tab-active');
+        }
+      })
+    }
+    //============================================================TAB-END
+  </script>
 </body>
 
 </html>

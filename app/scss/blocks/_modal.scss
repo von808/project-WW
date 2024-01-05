@@ -463,5 +463,84 @@
     .modal-content {
       margin: 20px 0px;
     }
+
+    .tickets__form-input--box-track {
+      display: none;
+    }
+
+    .tickets__form-input--box-type:has(.dropdown__button .regarding-the-label)~.tickets__form-input--box-track {
+      display: flex;
+    }
+  }
+
+  &__withdraw {
+    max-width: 540px;
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 4px;
+    background: #FFF;
+
+    .modal-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &-title {
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .balance__elem-input--box {
+      max-width: 200px;
+      margin: 0 auto;
+    }
+
+    &-btns {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  &__api {
+    max-width: 200px;
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 4px;
+    background: #FFF;
+
+    .modal-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &-title {
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    &-btns {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  &__invite {
+    max-width: 300px;
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 4px;
+    background: #FFF;
+
+    .copy-box {
+      justify-content: center !important;
+    }
   }
 }

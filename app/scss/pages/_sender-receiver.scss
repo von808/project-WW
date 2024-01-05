@@ -50,6 +50,12 @@
   .dropdown__button {
     padding: 23px 25px 8px;
   }
+
+  .autoComplete_wrapper {
+    .logo__img {
+      margin-left: 20px;
+    }
+  }
 }
 
 .custom-line-item {
@@ -411,7 +417,6 @@
   }
 
   .dropdown__list {
-    max-height: 85px;
     top: 37px;
   }
 

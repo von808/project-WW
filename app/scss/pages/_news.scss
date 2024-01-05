@@ -27,6 +27,16 @@
     }
   }
 
+  &__item:nth-child(n+2) {
+    display: none;
+  }
+
+  &__items.history-show {
+    .news__item:nth-child(n+2) {
+      display: flex;
+    }
+  }
+
   &__item-more-btn {
     width: fit-content;
     margin: 0 auto;
@@ -64,16 +74,16 @@
 
     max-height: 171px;
     overflow: hidden;
-    
+
     font-size: 14px;
     font-weight: 400;
-    
+
     div {
       display: flex;
       flex-direction: column;
     }
   }
-  
+
   .news__info.news-more-active .news__descr {
     max-height: 600px;
     overflow: auto;
@@ -104,5 +114,21 @@
     color: #B0B0B0;
     font-size: 12px;
     font-weight: 600;
+  }
+
+  &__item-more-btn {
+    &.news-more-active {
+      .news__more-btn--more {
+        display: none;
+      }
+
+      .news__more-btn--less {
+        display: block;
+      }
+    }
+  }
+
+  .news__more-btn--less {
+    display: none;
   }
 }

@@ -657,7 +657,7 @@
                     </div>
                     <div class="balance__elem-box">
                       <span>User ID</span>
-                      <button class="table__btn">
+                      <button class="table__btn modal-open">
                         <svg class="icon-plus">
                           <use xlink:href="#plus"></use>
                         </svg>
@@ -848,9 +848,27 @@
                               <span class="tickets__form-input--placeholder">Track:</span>
                               <input class="tickets__form-input" type="text" value="KN190LP333PY344">
                             </div>
-                            <div class="tickets__form-input--box">
-                              <span class="tickets__form-input--placeholder">Priority:</span>
-                              <input class="tickets__form-input" type="text" value="Medium">
+                            <div class="tickets__form-input--box tickets__form-input--box-priority">
+                              <div class="form-group">
+                                <div class="dropdown">
+                                  <span class="tickets__form-input-title">Priority:</span>
+                                  <button class="dropdown__button" type="button">
+                                    <span class="dropdown__list-item-content">Medium</span>
+                                  </button>
+                                  <ul class="dropdown__list">
+                                    <li class="dropdown__list-item" data-value="high">
+                                      <span class="dropdown__list-item-content">High</span>
+                                    </li>
+                                    <li class="dropdown__list-item" data-value="medium">
+                                      <span class="dropdown__list-item-content">Medium</span>
+                                    </li>
+                                    <li class="dropdown__list-item" data-value="low">
+                                      <span class="dropdown__list-item-content">Low</span>
+                                    </li>
+                                  </ul>
+                                  <input type="text" name="select-category" value="medium" class="dropdown__input-hidden">
+                                </div>
+                              </div>
                             </div>
                           </div>
                           <textarea class="tickets__form-input--box tickets__form-input--textarea"

@@ -628,6 +628,7 @@
     transform: translateY(-50%);
     right: 13px;
     stroke: #242424;
+    pointer-events: none;
   }
 
   .dropdown__button {
@@ -645,6 +646,12 @@
   .dropdown__list-item {
     height: 35px;
     padding: 5px 13px;
+  }
+}
+
+.tickets__form-input--box-priority {
+  .dropdown__button {
+    padding-left: 77px;
   }
 }
 

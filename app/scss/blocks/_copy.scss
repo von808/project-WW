@@ -25,6 +25,16 @@
   align-items: center !important;
   gap: 10px;
   flex-direction: row-reverse;
+
+  &.copied {
+    .icon-copy {
+      stroke: #00BE35;
+    }
+
+    .copy-input {
+      color: #00BE35;
+    }
+  }
 }
 
 .btn__copy.copied {
