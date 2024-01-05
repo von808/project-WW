@@ -1,21 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  //============================================================SELECT-AND-COPY-START
-  const selectAll = document.querySelector('.select-all')
-  const copySelect = document.querySelector('.copy-select')
-
-  const selectBoxes = document.querySelectorAll('.purchases__item-box');
-  const selectCheckboxes = document.querySelectorAll('.purchases__item-box .checkbox-angle .checkbox-input');
-  const selectCopyTrack = document.querySelectorAll('.purchases__item-box .copy-input');
-
-
-  selectCheckboxes.forEach((elCheckbox) => {
-    selectAll.addEventListener('click', (e) => {
-      elCheckbox.checked = true;
-    });
-  });
-  //============================================================SELECT-AND-COPY-END
-
   //============================================================PAYMENT-START
   (function () {
     var caseItem = document.querySelectorAll('.wallet-payment'),
@@ -146,6 +130,22 @@ document.addEventListener('DOMContentLoaded', () => {
     this.parentNode.parentNode.classList.add('cstm-dropdown-active');
   }
   //============================================================DROPDOWN-CSTM-END
+
+  //============================================================SELECT-AND-COPY-START
+  const selectAll = document.querySelector('.select-all')
+  const copySelect = document.querySelector('.copy-select')
+
+  const selectBoxes = document.querySelectorAll('.purchases__item-box');
+  const selectCheckboxes = document.querySelectorAll('.purchases__item-box .checkbox-angle .checkbox-input');
+  const selectCopyTrack = document.querySelectorAll('.purchases__item-box .copy-input');
+
+
+  selectCheckboxes.forEach((elCheckbox) => {
+    selectAll.addEventListener('click', (e) => {
+      elCheckbox.checked = true;
+    });
+  });
+  //============================================================SELECT-AND-COPY-END
 
   //============================================================RATING-START
   const ratings = document.querySelectorAll('.rating');

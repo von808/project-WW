@@ -107,4 +107,10 @@
     color: #000;
     background: #fff
   }
+
+  &__contact-box,
+  &__password-box {
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+  }
 }

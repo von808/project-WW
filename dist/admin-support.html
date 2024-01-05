@@ -905,7 +905,7 @@
                   </div>
                 </div>
               </div>
-              <div class="admin-support__tab-item tab-item" id="support-tab_2">
+              <div class="admin-support__tab-item tab-item tab-compensations" id="support-tab_2">
                 <div class="admin-support__compensations">
                   <div class="admin-support__compensations-col-1">
                     <div class="balance__elem-box">
@@ -918,12 +918,52 @@
                     </div>
                     <div class="balance__elem-box">
                       <span>User ID</span>
-                      <button class="table__btn">
-                        <svg class="icon-plus">
-                          <use xlink:href="#plus"></use>
-                        </svg>
-                        <span>HS9TWSH</span>
-                      </button>
+                      <div class="tickets__form-input--box choice-user">
+                        <div class="form-group">
+                          <div class="dropdown">
+                            <div class="tickets__form-input-title">
+                              <svg class="icon-plus">
+                                <use xlink:href="#plus"></use>
+                              </svg>
+                            </div>
+                            <button class="dropdown__button" type="button">
+                              <span class="dropdown__list-item-content">HS9TWSH</span>
+                            </button>
+                            <ul class="dropdown__list">
+                              <li class="dropdown__list-item--searchid">
+                                <span>Search ID</span>
+                                <form>
+                                  <button type="button">
+                                    <svg class="icon-search">
+                                      <use xlink:href="#search"></use>
+                                    </svg>
+                                  </button>
+                                  <input type="text">
+                                </form>
+                              </li>
+                              <li class="dropdown__list-item" data-value="VB5466X74">
+                                <span class="dropdown__list-item-content">VB5466X74</span>
+                              </li>
+                              <li class="dropdown__list-item" data-value="KL3284BNC">
+                                <span class="dropdown__list-item-content">KL3284BNC</span>
+                              </li>
+                              <li class="dropdown__list-item" data-value="MB384IBCD">
+                                <span class="dropdown__list-item-content">MB384IBCD</span>
+                              </li>
+                              <li class="dropdown__list-item" data-value="EUX3248CC">
+                                <span class="dropdown__list-item-content">EUX3248CC</span>
+                              </li>
+                              <li class="dropdown__list-item" data-value="LOM834XXC">
+                                <span class="dropdown__list-item-content">LOM834XXC</span>
+                              </li>
+                              <li class="dropdown__list-item" data-value="MB384IBCD">
+                                <span class="dropdown__list-item-content">MB384IBCD</span>
+                              </li>
+                            </ul>
+                            <input type="text" name="select-category" value="" class="dropdown__input-hidden">
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div class="balance__elem-box">
                       <span>A</span>
@@ -1951,6 +1991,46 @@
               </svg>
             </button>
             <span class="copy-input">ww.biz/invite/jdfo49hwo94ofowj3</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal modals__change modals__change-contact" data-target="modal-change-contact">
+        <div class="modal-content">
+          <h2 class="modals__change-title">Contact (Telegram or JID)</h2>
+          <div class="modals__change-content">
+            <input class="cstm-input" type="text" autocomplete="off" value="@rankienawa">
+          </div>
+          <div class="modals__change-btns">
+            <button class="btn--cancel modal-close">Cancel</button>
+            <button class="btn modal-close">Save</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal modals__change modals__change-password" data-target="modal-change-password">
+        <div class="modal-content">
+          <h2 class="modals__change-title">CHANGE password</h2>
+          <div class="modals__change-content">
+            <div class="form__input-box">
+              <input class="form__input" type="text" placeholder=" ">
+              <label class="form__label">Old Password</label>
+            </div>
+            <div class="form__input-box form__input-box--cstm">
+              <input class="form__input" type="text" placeholder=" ">
+              <label class="form__label">Generate New Password</label>
+              <button class="btn--reset" type="button">
+                <svg class="icon-reset">
+                  <use xlink:href="#reset"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="form__input-box">
+              <input class="form__input" type="text" placeholder=" ">
+              <label class="form__label">Write New Password Here</label>
+            </div>
+          </div>
+          <div class="modals__change-btns">
+            <button class="btn--cancel modal-close">Cancel</button>
+            <button class="btn modal-close">Save</button>
           </div>
         </div>
       </div>

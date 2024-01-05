@@ -1427,6 +1427,70 @@ hr {
 .modals__invite .copy-box {
   justify-content: center !important;
 }
+.modals__change-contact {
+  max-width: 365px;
+  width: 100%;
+  padding: 23px 35px 33px;
+  background-color: #fff;
+}
+.modals__change-contact .modals__change-title {
+  margin-bottom: 20px;
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.modals__change-contact .modals__change-content {
+  margin-bottom: 35px;
+}
+.modals__change-contact .modals__change-btns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+.modals__change-contact .cstm-input {
+  width: 100%;
+  border-bottom: 1px solid #4D4AFD;
+  padding-bottom: 5px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}
+.modals__change-password {
+  max-width: 365px;
+  width: 100%;
+  padding: 23px 35px 33px;
+  background-color: #fff;
+}
+.modals__change-password .modals__change-title {
+  margin-bottom: 20px;
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.modals__change-password .modals__change-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+.modals__change-password .modals__change-btns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+.modals__change-password .form__input-box--cstm .btn--reset {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 22px;
+}
+.modals__change-password .form__input-box--cstm .btn--reset .icon-reset {
+  fill: #231F20;
+}
 
 input[type=number],
 input[type=number]::placeholder {
@@ -3590,6 +3654,10 @@ input[type=number]::placeholder {
   color: #000;
   background: #fff;
 }
+.account__contact-box, .account__password-box {
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+}
 
 .user__inner {
   max-width: 940px;
@@ -4075,6 +4143,61 @@ input[type=number]::placeholder {
 }
 .page-support .tickets__history .tickets__history-list-item:has(.dropdown__button .resolved):before {
   background-color: #A8E4BF;
+}
+.page-support .tab-compensations .choice-user .dropdown__button {
+  padding: 8px 25px;
+  padding-left: 76px;
+}
+.page-support .tab-compensations .choice-user .icon-plus {
+  width: 12px;
+  height: 12px;
+}
+.page-support .tab-compensations .balance__elem-box .choice-user span {
+  padding: 0;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+}
+.page-support .tab-compensations .tickets__form-input-title {
+  width: 12px;
+  height: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 54px;
+}
+.page-support .tab-compensations .choice-user .dropdown__list {
+  min-width: 290px;
+}
+
+.page-support .tab-compensations .choice-user .dropdown__button,
+.page-admin-support .tab-compensations .choice-user .dropdown__button {
+  padding: 8px 25px;
+  padding-left: 76px;
+  height: 35px;
+}
+.page-support .tab-compensations .choice-user .icon-plus,
+.page-admin-support .tab-compensations .choice-user .icon-plus {
+  width: 12px;
+  height: 12px;
+}
+.page-support .tab-compensations .balance__elem-box .choice-user span,
+.page-admin-support .tab-compensations .balance__elem-box .choice-user span {
+  padding: 0;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+}
+.page-support .tab-compensations .tickets__form-input-title,
+.page-admin-support .tab-compensations .tickets__form-input-title {
+  width: 12px;
+  height: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 54px;
+}
+.page-support .tab-compensations .choice-user .dropdown__list,
+.page-admin-support .tab-compensations .choice-user .dropdown__list {
+  min-width: 290px;
 }
 
 .tickets__send-priority {
